@@ -1,0 +1,3 @@
+// @flow
+
+declare var exports: { [className: string]: string } // eslint-disable-line no-unused-vars

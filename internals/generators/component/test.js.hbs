@@ -1,0 +1,25 @@
+/**
+*
+* {{ properCase name }} Test
+*
+* @flow
+*/
+
+// TODO: Shouldn't need this mock after upgrading to React 15.4
+//       https://github.com/facebook/jest/issues/1353
+jest.mock('react-dom')
+
+import React from 'react'
+import renderer from 'react-test-renderer'
+
+import { {{ properCase name }} } from './index'
+import { sampleProps } from './props'
+
+describe('<{{ properCase name }} />', () => {
+  it('renders correctly', () => {
+    const tree = renderer.create(
+      <{{ properCase name }} {...sampleProps} />
+    ).toJSON()
+    expect(tree).toMatchSnapshot()
+  })
+})

@@ -1,0 +1,26 @@
+@import '_variables';
+@import '_mixins';
+@import 'sprite.scss';
+
+.container {
+  display: flex;
+  position: relative;
+}
+
+.link {
+  display: flex;
+  transition-duration: $transition-duration;
+  @include media('>phone') {
+    opacity: 0.7;
+    &:hover, &:focus {
+      opacity: 1;
+    }
+  }
+}
+
+.icon {
+  transition-duration: $transition-duration;
+  text-indent: -999em;
+}
+
+@include retina-sprites(($github-group, $stackoverflow-group, $linkedin-group, $twitter-group, $email-group));

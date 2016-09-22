@@ -1,0 +1,14 @@
+exports[`<TouchFeedback /> renders correctly 1`] = `
+<span
+  onTouchEnd={[Function anonymous]}
+  style={
+    Object {
+      "display": "inline-block",
+      "fontSize": 0,
+      "lineHeight": 0,
+      "position": "relative"
+    }
+  }>
+  0
+</span>
+`;

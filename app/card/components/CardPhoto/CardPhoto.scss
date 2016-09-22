@@ -1,0 +1,19 @@
+@import '_variables';
+@import '_mixins';
+
+.container {
+  border-radius: 50%;
+  overflow: hidden;
+  width: 80px;
+  height: 80px;
+  @include media('>phone') {
+    width: 115px;
+    height: 115px;
+  }
+}
+
+.img {
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}

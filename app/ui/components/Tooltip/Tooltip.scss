@@ -1,0 +1,40 @@
+@import '_variables';
+@import '_mixins';
+
+.container {
+  display: block;
+  position: absolute;
+  z-index: 100;
+  top: 100%;
+  left: 50%;
+  margin-top: 15px;
+  word-wrap: break-word;
+  white-space: nowrap;
+}
+
+.innerWrapper {
+  position: relative;
+  left: -50%;
+  perspective: 300px;
+}
+
+.inner {
+  padding: 2px 10px;
+  background: darken($gray, 10%);
+  color: white;
+  text-align: center;
+  font-size: 16px;
+  &:after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-color: transparent;
+    border-style: solid;
+    top: -6px;
+    left: 50%;
+    margin-left: -6px;
+    border-width: 0 6px 6px;
+    border-bottom-color: darken($gray, 10%);
+  }
+}

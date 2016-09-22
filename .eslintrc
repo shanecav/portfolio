@@ -1,0 +1,28 @@
+{
+  "parser"  : "babel-eslint",
+  "extends" : [
+    "standard",
+    "standard-react"
+  ],
+  "env"     : {
+    "browser" : true,
+    "jest": true
+  },
+  "plugins": [
+    "react",
+    "flowtype"
+  ],
+  "globals" : {
+    "__DEV__"      : false,
+    "__PROD__"     : false,
+    "__DEBUG__"    : false
+  },
+  "rules": {
+    "flowtype/define-flow-type": 1,
+    "flowtype/use-flow-type": 1,
+    "semi" : [2, "never"],
+    "handle-callback-err": 0,
+    "comma-dangle": ["error", "only-multiline"],
+    "jsx-quotes": ["error", "prefer-single"]
+  }
+}

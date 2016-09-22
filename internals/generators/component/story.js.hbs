@@ -1,0 +1,17 @@
+/**
+*
+* {{ properCase name }} Story
+*
+* @flow
+*/
+
+import React from 'react'
+import { storiesOf } from '@kadira/storybook'
+
+import { {{ properCase name }} } from './index'
+import { sampleProps } from './props'
+
+storiesOf('{{ properCase name }}', module)
+  .add('default', () => {
+    return <{{ properCase name }} {...sampleProps} />
+  })

@@ -1,0 +1,21 @@
+// @flow
+
+export type State = any
+export type Action = Object
+export type AsyncAction = any
+export type Reducer = (state: State, action: Action) => State
+export type Selector = (state: State) => any
+export type BaseDispatch = (a: Action) => Action
+export type Dispatch = (a: Action | AsyncAction) => any
+export type ActionCreator = (...args: any) => Action | AsyncAction
+export type MiddlewareAPI = { dispatch: Dispatch, getState: () => State }
+export type Middleware = (api: MiddlewareAPI) => (next: Dispatch) => Dispatch
+export type Store = {
+  dispatch: Dispatch,
+  getState: () => State,
+  subscribe: (listener: () => void) => () => void,
+  replaceReducer: (reducer: Reducer) => void
+}
+export type StoreCreator = (reducer: Reducer, initialState: ?State) => Store
+export type StoreEnhancer = (next: StoreCreator) => StoreCreator
+export type Reducers = { [key: string]: Reducer }

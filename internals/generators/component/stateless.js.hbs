@@ -1,0 +1,56 @@
+/**
+*
+* {{ properCase name }}
+*
+* @flow
+*/
+
+import React from 'react'
+{{#if isContainer}}
+import { connect } from 'react-redux'
+{{/if}}
+{{#if wantCSS}}
+
+import styles from './{{ properCase name }}.scss'
+{{/if}}
+
+{{#if wantStorybook}}
+import type { Props } from './props'
+{{else}}
+{{#if wantTests}}
+import type { Props } from './props'
+{{else}}
+type Props = {
+
+}
+{{/if}}
+{{/if}}
+
+export const {{ properCase name }}: (props:Props)=>React.Element<*> = ({  }: Props) => {
+  return (
+    {{#if wantCSS}}
+    <div className={styles.container}>
+    {{else}}
+    <div>
+    {{/if}}
+      Hello, world!
+    </div>
+  )
+}
+
+{{#if isContainer}}
+const mapStateToProps = (state: Object, props: Props) => ({
+
+})
+
+const mapDispatchToProps = {
+
+}
+
+export default connect(
+  mapStateToProps,
+  mapDispatchToProps
+)({{ properCase name }})
+{{else}}
+export default {{ properCase name }}
+{{/if}}

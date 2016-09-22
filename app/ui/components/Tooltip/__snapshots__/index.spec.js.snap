@@ -1,0 +1,39 @@
+exports[`<Tooltip /> renders correctly when hidden 1`] = `
+<div
+  className="container">
+  <div
+    className="innerWrapper">
+    <div
+      className="inner"
+      style={
+        Object {
+          "opacity": 0,
+          "transform": "translate3d(0, 8px, 0) rotateX( -40deg )",
+          "visibility": "hidden"
+        }
+      }>
+      Testing Hidden...
+    </div>
+  </div>
+</div>
+`;
+
+exports[`<Tooltip /> renders correctly when shown 1`] = `
+<div
+  className="container show">
+  <div
+    className="innerWrapper">
+    <div
+      className="inner"
+      style={
+        Object {
+          "opacity": 0,
+          "transform": "translate3d(0, 8px, 0) rotateX( -40deg )",
+          "visibility": "hidden"
+        }
+      }>
+      Testing Shown...
+    </div>
+  </div>
+</div>
+`;

@@ -1,0 +1,16 @@
+@import '_variables';
+@import '_mixins';
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0;
+  @include media('>phone') {
+    padding: 170px 0;
+  }
+}
+
+.cardContainer {
+
+}

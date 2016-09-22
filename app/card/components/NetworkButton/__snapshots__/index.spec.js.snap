@@ -1,0 +1,46 @@
+exports[`<NetworkButton /> renders correctly 1`] = `
+<div
+  className="container">
+  <span
+    onTouchEnd={[Function anonymous]}
+    style={
+      Object {
+        "display": "inline-block",
+        "fontSize": 0,
+        "lineHeight": 0,
+        "position": "relative"
+      }
+    }>
+    <a
+      className="link"
+      href="https://github.com/shanecav"
+      onBlur={[Function anonymous]}
+      onFocus={[Function anonymous]}
+      onMouseEnter={[Function anonymous]}
+      onMouseLeave={[Function anonymous]}>
+      <span
+        className="github icon">
+        github.com/shanecav
+      </span>
+    </a>
+    0
+  </span>
+  <div
+    className="container">
+    <div
+      className="innerWrapper">
+      <div
+        className="inner"
+        style={
+          Object {
+            "opacity": 0,
+            "transform": "translate3d(0, 8px, 0) rotateX( -40deg )",
+            "visibility": "hidden"
+          }
+        }>
+        github.com/shanecav
+      </div>
+    </div>
+  </div>
+</div>
+`;

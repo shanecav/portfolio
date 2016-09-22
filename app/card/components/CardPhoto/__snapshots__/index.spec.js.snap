@@ -1,0 +1,9 @@
+exports[`<CardPhoto /> renders correctly 1`] = `
+<div
+  className="container">
+  <img
+    alt="Shane Cavaliere"
+    className="img"
+    src="http://d1x6pxn199r2dp.cloudfront.net/images/shanecavaliere-avatar.jpg" />
+</div>
+`;
