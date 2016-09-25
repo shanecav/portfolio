@@ -1,6 +1,6 @@
 /**
 *
-* IconList Test
+* FlexGroupHorizontal Test
 *
 * @flow
 */
@@ -12,22 +12,22 @@ jest.mock('react-dom')
 import React from 'react'
 import renderer from 'react-test-renderer'
 
-import { IconList } from './index'
+import { FlexGroupHorizontal } from './index'
 import { sampleProps, sampleChildren } from './props'
 
-describe('IconList', () => {
+describe('FlexGroupHorizontal', () => {
   it('renders correctly when empty', () => {
     const tree = renderer.create(
-      <IconList {...sampleProps} />
+      <FlexGroupHorizontal {...sampleProps} />
     ).toJSON()
     expect(tree).toMatchSnapshot()
   })
 
   it('renders correctly with children', () => {
     const tree = renderer.create(
-      <IconList {...sampleProps}>
+      <FlexGroupHorizontal {...sampleProps}>
         {sampleChildren.map(child => child)}
-      </IconList>
+      </FlexGroupHorizontal>
     ).toJSON()
     expect(tree).toMatchSnapshot()
   })

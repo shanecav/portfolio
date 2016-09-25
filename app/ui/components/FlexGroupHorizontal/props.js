@@ -1,6 +1,6 @@
 /**
 *
-* IconList Props
+* FlexGroupHorizontal Props
 *
 * @flow
 */

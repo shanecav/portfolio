@@ -10,7 +10,7 @@ import { connect } from 'react-redux'
 
 import styles from './Card.scss'
 import CardPhoto from '../../components/CardPhoto'
-import IconList from '../../../ui/components/IconList'
+import FlexGroupHorizontal from '../../../ui/components/FlexGroupHorizontal'
 import NetworkButton from '../../components/NetworkButton'
 import FETCH_STATUS from '../../../app/constants/fetch-status'
 
@@ -26,11 +26,11 @@ export const Card: (props:Props)=>React.Element<*> = ({ profile, fetchStatus }: 
         <div className={styles.cardRight}>
           <h1 className={styles.name}>{profile.name}</h1>
           <h3 className={styles.title}>{profile.title}</h3>
-          <IconList>
+          <FlexGroupHorizontal>
             {profile.networks.map((network, i) => (
               <NetworkButton key={i} type={network.type} link={network.link} />
             ))}
-          </IconList>
+          </FlexGroupHorizontal>
         </div>
       </div>
     )

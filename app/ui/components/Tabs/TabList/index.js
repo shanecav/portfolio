@@ -11,7 +11,7 @@ import {
 } from 'react-motion'
 
 import spring from '../spring'
-import IconList from '../../IconList'
+import FlexGroupHorizontal from '../../FlexGroupHorizontal'
 import styles from './TabList.scss'
 
 type TabItemNode = {
@@ -39,7 +39,7 @@ export class TabList extends Component {
     return (
       <div className={styles.container}>
         <div className={styles.listContainer}>
-          <IconList>
+          <FlexGroupHorizontal>
             {React.Children.map(this.props.children, (child, i) => {
               const active = i === this.props.active
               return React.cloneElement(child, {
@@ -47,7 +47,7 @@ export class TabList extends Component {
                 refFn: active ? this._activeTabItemRef : undefined,
               })
             })}
-          </IconList>
+          </FlexGroupHorizontal>
         </div>
         {this.state && this.state.activeBg &&
           <Motion

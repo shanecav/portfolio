@@ -3,7 +3,7 @@ exports[`<TabList /> renders correctly with active set to 0 1`] = `
   className="container">
   <div
     className="listContainer">
-    <IconList>
+    <FlexGroupHorizontal>
       <TabItem
         active={true}
         refFn={[Function anonymous]}
@@ -13,7 +13,7 @@ exports[`<TabList /> renders correctly with active set to 0 1`] = `
         active={false}
         text="Tech Stack"
         type="tech-icon" />
-    </IconList>
+    </FlexGroupHorizontal>
   </div>
 </div>
 `;
@@ -23,7 +23,7 @@ exports[`<TabList /> renders correctly with active set to 1 1`] = `
   className="container">
   <div
     className="listContainer">
-    <IconList>
+    <FlexGroupHorizontal>
       <TabItem
         active={false}
         text="Description"
@@ -33,7 +33,7 @@ exports[`<TabList /> renders correctly with active set to 1 1`] = `
         refFn={[Function anonymous]}
         text="Tech Stack"
         type="tech-icon" />
-    </IconList>
+    </FlexGroupHorizontal>
   </div>
 </div>
 `;

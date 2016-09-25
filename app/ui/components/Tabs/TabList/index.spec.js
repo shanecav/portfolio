@@ -67,30 +67,30 @@ describe('<TabList />', () => {
     expect(wrapper.state('activeBg')).toBe(undefined)
   })
 
-  it('puts its children inside an IconList', () => {
+  it('puts its children inside an FlexGroupHorizontal', () => {
     const wrapper = shallow(
       <TabList>
         <button>One</button>
         <button>Two</button>
       </TabList>
     )
-    const iconList = wrapper.find('IconList').first()
-    expect(iconList.children().length).toEqual(2)
+    const FlexGroupHorizontal = wrapper.find('FlexGroupHorizontal').first()
+    expect(FlexGroupHorizontal.children().length).toEqual(2)
   })
 
-  it('injects active prop (boolean) into children of IconList', () => {
+  it('injects active prop (boolean) into children of FlexGroupHorizontal', () => {
     const wrapper = shallow(
       <TabList active={0}>
         <button>One</button>
         <button>Two</button>
       </TabList>
     )
-    const iconList = wrapper.find('IconList').first()
-    expect(iconList.childAt(0).prop('active')).toBe(true)
-    expect(iconList.childAt(1).prop('active')).toBe(false)
+    const FlexGroupHorizontal = wrapper.find('FlexGroupHorizontal').first()
+    expect(FlexGroupHorizontal.childAt(0).prop('active')).toBe(true)
+    expect(FlexGroupHorizontal.childAt(1).prop('active')).toBe(false)
   })
 
-  it('injects _activeTabItemRef as refFn prop into active child of IconList', () => {
+  it('injects _activeTabItemRef as refFn prop into active child of FlexGroupHorizontal', () => {
     const wrapper = shallow(
       <TabList active={0}>
         <button>One</button>
@@ -98,8 +98,8 @@ describe('<TabList />', () => {
       </TabList>
     )
     const _activeTabItemRef = wrapper.instance()._activeTabItemRef
-    const iconList = wrapper.find('IconList').first()
-    expect(iconList.childAt(0).prop('refFn')).toBe(_activeTabItemRef)
-    expect(iconList.childAt(1).prop('refFn')).toBe(undefined)
+    const FlexGroupHorizontal = wrapper.find('FlexGroupHorizontal').first()
+    expect(FlexGroupHorizontal.childAt(0).prop('refFn')).toBe(_activeTabItemRef)
+    expect(FlexGroupHorizontal.childAt(1).prop('refFn')).toBe(undefined)
   })
 })

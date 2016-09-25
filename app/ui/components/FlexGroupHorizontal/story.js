@@ -1,6 +1,6 @@
 /**
 *
-* IconList Story
+* FlexGroupHorizontal Story
 *
 * @flow
 */
@@ -8,16 +8,16 @@
 import React from 'react'
 import { storiesOf } from '@kadira/storybook'
 
-import { IconList } from './index'
+import { FlexGroupHorizontal } from './index'
 import { sampleProps, sampleChildren } from './props'
 
-storiesOf('IconList', module)
+storiesOf('FlexGroupHorizontal', module)
   .add('NetworkButtons', () => {
     return (
       <div style={{padding: 50}}>
-        <IconList {...sampleProps}>
+        <FlexGroupHorizontal {...sampleProps}>
           {sampleChildren}
-        </IconList>
+        </FlexGroupHorizontal>
       </div>
     )
   })

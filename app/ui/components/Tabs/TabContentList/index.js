@@ -48,7 +48,7 @@ export class TabContentList extends Component {
   }
 
   componentWillReceiveProps (nextProps: Props) {
-    // if the active tab has changed
+    // if the active tab or height prop has changed
     if (nextProps.active !== this.props.active || nextProps.height !== this.props.height) {
       const newHeight = this._getHeight(nextProps)
       // if the height has changed (it may not if props.height==='max')

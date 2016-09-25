@@ -1,17 +1,17 @@
 /**
 *
-* IconList
+* FlexGroupHorizontal
 *
 * @flow
 */
 
 import React from 'react'
 
-import styles from './IconList.scss'
+import styles from './FlexGroupHorizontal.scss'
 
 import type { Props } from './props'
 
-export const IconList: (props:Props)=>React.Element<*> = ({ children }: Props) => {
+export const FlexGroupHorizontal: (props:Props)=>React.Element<*> = ({ children }: Props) => {
   return (
     <ul className={styles.list}>
       {React.Children.map(children, (child, i) => (
@@ -23,4 +23,4 @@ export const IconList: (props:Props)=>React.Element<*> = ({ children }: Props) =
   )
 }
 
-export default IconList
+export default FlexGroupHorizontal

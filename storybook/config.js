@@ -6,7 +6,7 @@ import './environment.css'
 function loadStories () {
   require('../app/card/components/CardPhoto/story.js')
   require('../app/card/containers/Card/story.js')
-  require('../app/ui/components/IconList/story.js')
+  require('../app/ui/components/FlexGroupHorizontal/story.js')
   require('../app/card/components/NetworkButton/story.js')
   require('../app/card/components/NetworkButton/story.js')
   require('../app/ui/components/TouchFeedback/story.js')

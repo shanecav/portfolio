@@ -1,9 +1,9 @@
-exports[`IconList renders correctly when empty 1`] = `
+exports[`FlexGroupHorizontal renders correctly when empty 1`] = `
 <ul
   className="list" />
 `;
 
-exports[`IconList renders correctly with children 1`] = `
+exports[`FlexGroupHorizontal renders correctly with children 1`] = `
 <ul
   className="list">
   <li
