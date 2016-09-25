@@ -17,7 +17,9 @@ import { TouchFeedback } from './index'
 describe('<TouchFeedback />', () => {
   it('renders correctly', () => {
     const tree = renderer.create(
-      <TouchFeedback type='ellipse' />
+      <TouchFeedback type='ellipse'>
+        <button className='test'>Test Button</button>
+      </TouchFeedback>
     ).toJSON()
     expect(tree).toMatchSnapshot()
   })

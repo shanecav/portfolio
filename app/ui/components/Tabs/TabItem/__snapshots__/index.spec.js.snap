@@ -1,0 +1,80 @@
+exports[`<TabItem /> desc renders correctly 1`] = `
+<div
+  className="container">
+  <span
+    onClick={[Function anonymous]}
+    onTouchEnd={[Function anonymous]}
+    style={
+      Object {
+        "display": "inline-block",
+        "fontSize": 0,
+        "lineHeight": 0,
+        "position": "relative"
+      }
+    }>
+    <button
+      className="button"
+      onClick={undefined}>
+      <span
+        className="desc-icon icon">
+        Description
+      </span>
+    </button>
+    0
+  </span>
+</div>
+`;
+
+exports[`<TabItem /> tech active renders correctly 1`] = `
+<div
+  className="container">
+  <span
+    onClick={[Function anonymous]}
+    onTouchEnd={[Function anonymous]}
+    style={
+      Object {
+        "display": "inline-block",
+        "fontSize": 0,
+        "lineHeight": 0,
+        "position": "relative"
+      }
+    }>
+    <button
+      className="button active"
+      onClick={undefined}>
+      <span
+        className="tech-icon icon">
+        Tech Stack
+      </span>
+    </button>
+    0
+  </span>
+</div>
+`;
+
+exports[`<TabItem /> tech renders correctly 1`] = `
+<div
+  className="container">
+  <span
+    onClick={[Function anonymous]}
+    onTouchEnd={[Function anonymous]}
+    style={
+      Object {
+        "display": "inline-block",
+        "fontSize": 0,
+        "lineHeight": 0,
+        "position": "relative"
+      }
+    }>
+    <button
+      className="button"
+      onClick={undefined}>
+      <span
+        className="tech-icon icon">
+        Tech Stack
+      </span>
+    </button>
+    0
+  </span>
+</div>
+`;

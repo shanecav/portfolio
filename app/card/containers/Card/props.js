@@ -9,7 +9,7 @@ import {
   List,
 } from 'immutable'
 
-import { networkObjects } from '../../components/IconList/props'
+import { networkObjects } from '../../../ui/components/IconList/props'
 import ProfileRecord from '../../records/Profile'
 import NetworkRecord from '../../records/Network'
 import FETCH_STATUS from '../../../app/constants/fetch-status'

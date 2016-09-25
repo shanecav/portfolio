@@ -1,0 +1,31 @@
+exports[`<TabContentList /> active=0 (default height) renders correctly 1`] = `
+<Motion
+  style={
+    Object {
+      "h": 0
+    }
+  } />
+`;
+
+exports[`<TabContentList /> active=1 (default height) renders correctly 1`] = `
+<Motion
+  style={
+    Object {
+      "h": 0
+    }
+  } />
+`;
+
+exports[`<TabContentList /> height=current renders correctly 1`] = `
+<Motion
+  style={
+    Object {
+      "h": Object {
+        "damping": 27,
+        "precision": 0.01,
+        "stiffness": 250,
+        "val": 0
+      }
+    }
+  } />
+`;

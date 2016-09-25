@@ -8,11 +8,14 @@
 import React from 'react'
 
 import Header from '../layout/components/Header'
+import Card from '../card/containers/Card'
 
 const Root = () => {
   return (
     <div>
-      <Header />
+      <Header>
+        <Card />
+      </Header>
     </div>
   )
 }

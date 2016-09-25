@@ -1,5 +1,6 @@
 exports[`<TouchFeedback /> renders correctly 1`] = `
 <span
+  onClick={[Function anonymous]}
   onTouchEnd={[Function anonymous]}
   style={
     Object {
@@ -9,6 +10,10 @@ exports[`<TouchFeedback /> renders correctly 1`] = `
       "position": "relative"
     }
   }>
+  <button
+    className="test">
+    Test Button
+  </button>
   0
 </span>
 `;

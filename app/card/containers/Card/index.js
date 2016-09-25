@@ -10,14 +10,13 @@ import { connect } from 'react-redux'
 
 import styles from './Card.scss'
 import CardPhoto from '../../components/CardPhoto'
-import IconList from '../../components/IconList'
+import IconList from '../../../ui/components/IconList'
 import NetworkButton from '../../components/NetworkButton'
 import FETCH_STATUS from '../../../app/constants/fetch-status'
 
 import type { Props } from './props'
 
 export const Card: (props:Props)=>React.Element<*> = ({ profile, fetchStatus }: Props) => {
-  console.log('Card rendering with profile:', profile)
   if (fetchStatus === FETCH_STATUS.FETCHED) {
     return (
       <div className={styles.container}>

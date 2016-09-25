@@ -16,7 +16,7 @@ storiesOf('IconList', module)
     return (
       <div style={{padding: 50}}>
         <IconList {...sampleProps}>
-          {sampleChildren.map(child => child)}
+          {sampleChildren}
         </IconList>
       </div>
     )

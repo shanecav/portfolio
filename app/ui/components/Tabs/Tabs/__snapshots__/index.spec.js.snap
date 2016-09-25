@@ -1,0 +1,113 @@
+exports[`<Tabs /> snapshots height=current renders correctly 1`] = `
+<div
+  className="container">
+  <TabList
+    active={0}>
+    <TabItem
+      active={true}
+      handleClick={[Function anonymous]}
+      text="Description"
+      type="desc-icon" />
+    <TabItem
+      handleClick={[Function anonymous]}
+      text="Tech Stack"
+      type="tech-icon" />
+  </TabList>
+  <TabContentList
+    active={0}
+    height="current">
+    <div>
+      <h3>
+        Description
+      </h3>
+      <p>
+        Lorem ipsum dolor sit amet.
+      </p>
+    </div>
+    <div>
+      <h3>
+        Tech
+      </h3>
+      <p>
+        Lorem ipsum dolor sit amet.
+      </p>
+    </div>
+  </TabContentList>
+</div>
+`;
+
+exports[`<Tabs /> snapshots height=max renders correctly 1`] = `
+<div
+  className="container">
+  <TabList
+    active={0}>
+    <TabItem
+      active={true}
+      handleClick={[Function anonymous]}
+      text="Description"
+      type="desc-icon" />
+    <TabItem
+      handleClick={[Function anonymous]}
+      text="Tech Stack"
+      type="tech-icon" />
+  </TabList>
+  <TabContentList
+    active={0}
+    height="max">
+    <div>
+      <h3>
+        Description
+      </h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor euismod nulla sit amet venenatis. Ut lobortis lectus id luctus gravida. Aenean euismod aliquet eros, nec fermentum neque auctor vel.
+      </p>
+    </div>
+    <div>
+      <h3>
+        Tech
+      </h3>
+      <p>
+        Lorem ipsum dolor sit amet.
+      </p>
+    </div>
+  </TabContentList>
+</div>
+`;
+
+exports[`<Tabs /> snapshots initialTab=1 renders correctly 1`] = `
+<div
+  className="container">
+  <TabList
+    active={1}>
+    <TabItem
+      active={true}
+      handleClick={[Function anonymous]}
+      text="Description"
+      type="desc-icon" />
+    <TabItem
+      handleClick={[Function anonymous]}
+      text="Tech Stack"
+      type="tech-icon" />
+  </TabList>
+  <TabContentList
+    active={1}
+    height="max">
+    <div>
+      <h3>
+        Description
+      </h3>
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec porttitor euismod nulla sit amet venenatis. Ut lobortis lectus id luctus gravida. Aenean euismod aliquet eros, nec fermentum neque auctor vel.
+      </p>
+    </div>
+    <div>
+      <h3>
+        Tech
+      </h3>
+      <p>
+        Lorem ipsum dolor sit amet.
+      </p>
+    </div>
+  </TabContentList>
+</div>
+`;

@@ -10,14 +10,11 @@ import React from 'react'
 import styles from './Header.scss'
 
 import type { Props } from './props'
-import Card from '../../../card/containers/Card'
 
-export const Header: (props:Props)=>React.Element<*> = () => {
+export const Header: (props:Props)=>React.Element<*> = ({ children }: Props) => {
   return (
     <div className={styles.container}>
-      <div className={styles.cardContainer}>
-        <Card />
-      </div>
+      {children}
     </div>
   )
 }

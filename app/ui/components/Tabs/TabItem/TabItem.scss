@@ -1,0 +1,37 @@
+@import '_variables';
+@import '_mixins';
+@import 'sprite.scss';
+
+.container {
+  display: flex;
+}
+
+.button {
+  border: none;
+  background: none;
+  padding: 0 7px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.5;
+  transition-duration: $transition-duration;
+  cursor: pointer;
+  &:hover {
+    opacity: 1;
+  }
+  &:active {
+    border: none;
+    outline: 0;
+  }
+  &.active {
+    opacity: 1;
+    cursor: default;
+  }
+}
+
+.icon {
+  text-indent: -999em;
+}
+
+@include retina-sprites(($desc-icon-group, $tech-icon-group));

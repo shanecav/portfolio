@@ -13,6 +13,7 @@ import {
 import without from 'lodash/without'
 
 type State = {
+  touchable: boolean,
   node: {
     width: number,
     height: number,
@@ -26,6 +27,7 @@ export class TouchFeedback extends Component {
   constructor (props: Object) {
     super(props)
     this.state = {
+      touchable: false,
       node: {
         width: 0,
         height: 0,
@@ -56,6 +58,7 @@ export class TouchFeedback extends Component {
     return (
       <span
         onTouchEnd={this._handleTouch}
+        onClick={this._handleClick}
         ref={this._saveRef}
         style={{
           display: 'inline-block',
@@ -81,7 +84,7 @@ export class TouchFeedback extends Component {
               onRest={this._handleAnimationEnd(ts)}
               key={ts}
             >
-              {({growth, opacity}) =>
+              {({growth, opacity}) => (
                 <svg
                   width={this.state.node.width + this.props.growth * 2}
                   height={this.state.node.height + this.props.growth * 2}
@@ -124,7 +127,7 @@ export class TouchFeedback extends Component {
                       }} />
                   }
                 </svg>
-              }
+              )}
             </Motion>
           )
         })}
@@ -150,7 +153,17 @@ export class TouchFeedback extends Component {
   }
 
   _handleTouch = () => {
-    if (!this.props.disabled) {
+    // only use onTouchEnd to determine if its a touch environment
+    // actual logic happens via onClick (if this.state.touchable is true)
+    if (!this.state.touchable) {
+      this.setState({
+        touchable: true,
+      })
+    }
+  }
+
+  _handleClick = () => {
+    if (!this.props.disabled && this.state.touchable) {
       if (this.props.url) {
         setTimeout(() => { window.location = this.props.url }, 300)
       }

@@ -1,0 +1,59 @@
+exports[`<TabContentItem /> position=active renders correctly 1`] = `
+<Motion
+  style={
+    Object {
+      "opacity": Object {
+        "damping": 27,
+        "precision": 0.01,
+        "stiffness": 250,
+        "val": 1
+      },
+      "x": Object {
+        "damping": 27,
+        "precision": 0.01,
+        "stiffness": 250,
+        "val": 0
+      }
+    }
+  } />
+`;
+
+exports[`<TabContentItem /> position=left renders correctly 1`] = `
+<Motion
+  style={
+    Object {
+      "opacity": Object {
+        "damping": 27,
+        "precision": 0.01,
+        "stiffness": 250,
+        "val": 0
+      },
+      "x": Object {
+        "damping": 27,
+        "precision": 0.01,
+        "stiffness": 250,
+        "val": -50
+      }
+    }
+  } />
+`;
+
+exports[`<TabContentItem /> position=right renders correctly 1`] = `
+<Motion
+  style={
+    Object {
+      "opacity": Object {
+        "damping": 27,
+        "precision": 0.01,
+        "stiffness": 250,
+        "val": 0
+      },
+      "x": Object {
+        "damping": 27,
+        "precision": 0.01,
+        "stiffness": 250,
+        "val": 50
+      }
+    }
+  } />
+`;

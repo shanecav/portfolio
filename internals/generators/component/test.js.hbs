@@ -5,21 +5,20 @@
 * @flow
 */
 
-// TODO: Shouldn't need this mock after upgrading to React 15.4
-//       https://github.com/facebook/jest/issues/1353
-jest.mock('react-dom')
-
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { shallow } from 'enzyme'
+import { shallowToJson } from 'enzyme-to-json'
 
 import { {{ properCase name }} } from './index'
 import { sampleProps } from './props'
 
 describe('<{{ properCase name }} />', () => {
+  // Snapshots
+
   it('renders correctly', () => {
-    const tree = renderer.create(
+    const wrapper = shallow(
       <{{ properCase name }} {...sampleProps} />
-    ).toJSON()
-    expect(tree).toMatchSnapshot()
+    )
+    // expect(shallowToJson(wrapper)).toMatchSnapshot(){{!-- initially commented to avoid bad snapshot --}}
   })
 })

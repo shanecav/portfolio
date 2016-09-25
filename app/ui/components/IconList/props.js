@@ -7,7 +7,7 @@
 
 import React from 'react'
 
-import NetworkButton from '../NetworkButton'
+import NetworkButton from '../../../card/components/NetworkButton'
 
 export type Props = {
   children?: React.Element<*>,

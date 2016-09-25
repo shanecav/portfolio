@@ -2,6 +2,7 @@ exports[`<NetworkButton /> renders correctly 1`] = `
 <div
   className="container">
   <span
+    onClick={[Function anonymous]}
     onTouchEnd={[Function anonymous]}
     style={
       Object {

@@ -1,0 +1,23 @@
+@import '_variables';
+@import '_mixins';
+
+.container {
+  position: relative;
+}
+
+.listContainer {
+  position: relative;
+  z-index: 2;
+}
+
+.activeBg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  // 1px width/height lets us easily animate scale() to specific dimensions
+  width: 1px;
+  height: 1px;
+  transform-origin: top left;
+  background-color: $lightPurple;
+  z-index: 1;
+}

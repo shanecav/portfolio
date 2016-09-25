@@ -14,7 +14,12 @@ import { sampleProps } from './props'
 storiesOf('NetworkButton', module)
   .add('github', () => {
     return (
-      <div style={{padding: 50, width: 300, textAlign: 'center'}}>
+      <div style={{
+        display: 'flex',
+        padding: 50,
+        width: 300,
+        justifyContent: 'center',
+      }}>
         <NetworkButton {...sampleProps} />
       </div>
     )

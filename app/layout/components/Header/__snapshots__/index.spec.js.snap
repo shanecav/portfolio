@@ -1,0 +1,4 @@
+exports[`<Header /> renders correctly 1`] = `
+<div
+  className="container" />
+`;
