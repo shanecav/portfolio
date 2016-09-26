@@ -8,7 +8,6 @@
 import React from 'react'
 import { shallow } from 'enzyme'
 import { shallowToJson } from 'enzyme-to-json'
-import isEqual from 'lodash/isEqual'
 
 import { TabList } from './index'
 import { sampleChildren, sampleProps } from './props'
@@ -117,8 +116,8 @@ describe('<TabList />', () => {
     const allInjected = tabItems.everyWhere((tabItem) => (
       typeof tabItem.prop('updateActiveItem') === 'function'
     ))
-    const calledWithIndex = isEqual(updateActiveItem.mock.calls, [[0], [1]])
-    expect(allInjected && calledWithIndex).toBe(true)
+    expect(allInjected).toBe(true)
+    expect(updateActiveItem.mock.calls).toEqual([[0], [1]])
   })
 
   it('injects _activeTabItemRef as refFn prop into active TabItem child', () => {
