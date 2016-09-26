@@ -2,16 +2,14 @@ exports[`<Tabs /> snapshots height=current renders correctly 1`] = `
 <div
   className="container">
   <TabList
-    active={0}>
-    <TabItem
-      active={true}
-      handleClick={[Function anonymous]}
+    active={0}
+    updateActiveItem={[Function anonymous]}>
+    <ProjectInfoIcon
       text="Description"
-      type="desc-icon" />
-    <TabItem
-      handleClick={[Function anonymous]}
+      type="desc" />
+    <ProjectInfoIcon
       text="Tech Stack"
-      type="tech-icon" />
+      type="tech" />
   </TabList>
   <TabContentList
     active={0}
@@ -40,16 +38,14 @@ exports[`<Tabs /> snapshots height=max renders correctly 1`] = `
 <div
   className="container">
   <TabList
-    active={0}>
-    <TabItem
-      active={true}
-      handleClick={[Function anonymous]}
+    active={0}
+    updateActiveItem={[Function anonymous]}>
+    <ProjectInfoIcon
       text="Description"
-      type="desc-icon" />
-    <TabItem
-      handleClick={[Function anonymous]}
+      type="desc" />
+    <ProjectInfoIcon
       text="Tech Stack"
-      type="tech-icon" />
+      type="tech" />
   </TabList>
   <TabContentList
     active={0}
@@ -78,16 +74,14 @@ exports[`<Tabs /> snapshots initialTab=1 renders correctly 1`] = `
 <div
   className="container">
   <TabList
-    active={1}>
-    <TabItem
-      active={true}
-      handleClick={[Function anonymous]}
+    active={1}
+    updateActiveItem={[Function anonymous]}>
+    <ProjectInfoIcon
       text="Description"
-      type="desc-icon" />
-    <TabItem
-      handleClick={[Function anonymous]}
+      type="desc" />
+    <ProjectInfoIcon
       text="Tech Stack"
-      type="tech-icon" />
+      type="tech" />
   </TabList>
   <TabContentList
     active={1}

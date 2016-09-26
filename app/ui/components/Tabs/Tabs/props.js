@@ -7,9 +7,11 @@
 
 import React from 'react'
 
-import TabItem from '../TabItem'
 import TabList from '../TabList'
+import ProjectInfoIcon from '../../../../portfolio/components/ProjectInfoIcon'
 import TabContentList from '../TabContentList'
+
+import { sampleProps as tabListSampleProps } from '../TabList/props'
 
 export type Props = {
   initialTab?: number,
@@ -18,20 +20,19 @@ export type Props = {
 
 export const tabItemProps = [
   {
-    type: 'desc-icon',
+    type: 'desc',
     text: 'Description',
-    active: true,
   },
   {
-    type: 'tech-icon',
+    type: 'tech',
     text: 'Tech Stack',
   },
 ]
 
 export const sampleTabList = (
-  <TabList>
+  <TabList {...tabListSampleProps}>
     {tabItemProps.map((props, i) => (
-      <TabItem key={i} {...props} />
+      <ProjectInfoIcon key={i} {...props} />
     ))}
   </TabList>
 )

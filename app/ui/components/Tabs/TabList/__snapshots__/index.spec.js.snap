@@ -7,12 +7,18 @@ exports[`<TabList /> renders correctly with active set to 0 1`] = `
       <TabItem
         active={true}
         refFn={[Function anonymous]}
-        text="Description"
-        type="desc-icon" />
+        updateActiveItem={[Function anonymous]}>
+        <ProjectInfoIcon
+          text="Description"
+          type="desc" />
+      </TabItem>
       <TabItem
         active={false}
-        text="Tech Stack"
-        type="tech-icon" />
+        updateActiveItem={[Function anonymous]}>
+        <ProjectInfoIcon
+          text="Tech Stack"
+          type="tech" />
+      </TabItem>
     </FlexGroupHorizontal>
   </div>
 </div>
@@ -26,13 +32,19 @@ exports[`<TabList /> renders correctly with active set to 1 1`] = `
     <FlexGroupHorizontal>
       <TabItem
         active={false}
-        text="Description"
-        type="desc-icon" />
+        updateActiveItem={[Function anonymous]}>
+        <ProjectInfoIcon
+          text="Description"
+          type="desc" />
+      </TabItem>
       <TabItem
         active={true}
         refFn={[Function anonymous]}
-        text="Tech Stack"
-        type="tech-icon" />
+        updateActiveItem={[Function anonymous]}>
+        <ProjectInfoIcon
+          text="Tech Stack"
+          type="tech" />
+      </TabItem>
     </FlexGroupHorizontal>
   </div>
 </div>

@@ -89,7 +89,7 @@ describe('<Tabs /> snapshots', () => {
     expect(wrapper.state('active')).toEqual(1)
   })
 
-  it('injects active prop into TabList child from state.active', () => {
+  it('injects active prop (from state.active) into TabList child', () => {
     const wrapper = shallow(
       <Tabs>
         {sampleTabList}
@@ -98,6 +98,18 @@ describe('<Tabs /> snapshots', () => {
     )
     const tabListChild = wrapper.find('TabList').first()
     expect(tabListChild.prop('active')).toEqual(wrapper.state('active'))
+  })
+
+  it('injects _updateActiveItem as prop updateActiveItem into TabList child', () => {
+    const wrapper = shallow(
+      <Tabs>
+        {sampleTabList}
+        {sampleTabContentList}
+      </Tabs>
+    )
+    const _updateActiveItem = wrapper.instance()._updateActiveItem
+    const tabList = wrapper.find('TabList').first()
+    expect(tabList.prop('updateActiveItem')).toBe(_updateActiveItem)
   })
 
   it('injects active prop into TabContentList child from state.active', () => {
@@ -111,7 +123,7 @@ describe('<Tabs /> snapshots', () => {
     expect(tabListChild.prop('active')).toEqual(wrapper.state('active'))
   })
 
-  it('does not inject active prop into non-TabList & non-TabContentList children', () => {
+  it('does not render non-TabList & non-TabContentList children', () => {
     const OtherChild = () => <div />
     const wrapper = shallow(
       <Tabs>
@@ -122,20 +134,8 @@ describe('<Tabs /> snapshots', () => {
       </Tabs>
     )
     const otherChildren = wrapper.findWhere((child) => (
-      child.not('TabList') && child.not('TabContentList')
+      child.parent() === wrapper && child.not('TabList') && child.not('TabContentList')
     ))
-    expect(otherChildren.everyWhere(child => child.prop('active') === undefined))
-  })
-
-  it('injects _updateActiveItem as prop handleClick into TabList>TabItem children', () => {
-    const wrapper = shallow(
-      <Tabs>
-        {sampleTabList}
-        {sampleTabContentList}
-      </Tabs>
-    )
-    const _updateActiveItem = wrapper.instance()._updateActiveItem
-    const tabItemChildren = wrapper.find('TabList').first().find('TabItem')
-    expect(tabItemChildren.everyWhere(child => child.prop('handleClick') === _updateActiveItem))
+    expect(otherChildren.length).toBe(0)
   })
 })

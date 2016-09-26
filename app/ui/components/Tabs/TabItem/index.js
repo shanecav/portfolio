@@ -8,7 +8,6 @@
 import React, { Component } from 'react'
 import className from 'classnames/bind'
 
-import TouchFeedback from '../../TouchFeedback'
 import styles from './TabItem.scss'
 const cx = className.bind(styles)
 
@@ -19,16 +18,13 @@ export class TabItem extends Component {
 
   render () {
     return (
-      <div className={styles.container} ref={this.props.refFn}>
-        <TouchFeedback type='rectangle' growth={8} color='#D2C3D8' disabled={this.props.active}>
-          <button
-            className={cx(styles.button, {active: this.props.active})}
-            onClick={this.props.handleClick}
-          >
-            <span className={cx(styles[this.props.type], styles.icon)}>{this.props.text}</span>
-          </button>
-        </TouchFeedback>
-      </div>
+      <a className={cx(styles.container, {active: this.props.active})} ref={this.props.refFn} onClick={this.props.updateActiveItem}>
+        {React.Children.map(this.props.children, (child) => (
+          React.cloneElement(child, {
+            active: this.props.active,
+          })
+        ))}
+      </a>
     )
   }
 }

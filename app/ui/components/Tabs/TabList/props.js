@@ -7,29 +7,31 @@
 
 import React from 'react'
 
-import TabItem from '../TabItem'
+import ProjectInfoIcon from '../../../../portfolio/components/ProjectInfoIcon'
 
 export type Props = {
   active?: number,
+  updateActiveItem: (i: number) => (e: any) => void,
   children?: React.Element<*>,
+}
+
+export const sampleProps = {
+  updateActiveItem: () => () => undefined,
 }
 
 export const tabItemProps = [
   {
-    type: 'desc-icon',
+    type: 'desc',
     text: 'Description',
     active: true,
   },
   {
-    type: 'tech-icon',
+    type: 'tech',
     text: 'Tech Stack',
+    active: false,
   },
 ]
 
 export const sampleChildren = tabItemProps.map((props, i) => (
-  <TabItem key={i} {...props} />
+  <ProjectInfoIcon key={i} type={props.type} text={props.text} />
 ))
-
-export const sampleProps: Props = {
-  active: 0,
-}

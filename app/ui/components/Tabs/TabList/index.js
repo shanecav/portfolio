@@ -12,6 +12,7 @@ import {
 
 import spring from '../spring'
 import FlexGroupHorizontal from '../../FlexGroupHorizontal'
+import TabItem from '../TabItem'
 import styles from './TabList.scss'
 
 type TabItemNode = {
@@ -42,10 +43,16 @@ export class TabList extends Component {
           <FlexGroupHorizontal>
             {React.Children.map(this.props.children, (child, i) => {
               const active = i === this.props.active
-              return React.cloneElement(child, {
-                active,
-                refFn: active ? this._activeTabItemRef : undefined,
-              })
+              return (
+                <TabItem
+                  key={i}
+                  active={active}
+                  updateActiveItem={this.props.updateActiveItem(i)}
+                  refFn={active ? this._activeTabItemRef : undefined}
+                >
+                  {child}
+                </TabItem>
+              )
             })}
           </FlexGroupHorizontal>
         </div>

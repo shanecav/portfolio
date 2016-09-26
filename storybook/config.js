@@ -13,6 +13,7 @@ function loadStories () {
   require('../app/ui/components/Tabs/TabItem/story.js')
   require('../app/ui/components/Tabs/TabList/story.js')
   require('../app/ui/components/Tabs/Tabs/story.js')
+  require('../app/portfolio/components/ProjectInfoIcon/story.js')
 }
 
 configure(loadStories, module)

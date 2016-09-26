@@ -38,15 +38,9 @@ export class Tabs extends Component {
             // if this child is a TabList...
             if (child.type === TabList) {
               return React.cloneElement(child, {
-                // set the TabList's active prop according to this.state...
+                // set the TabList's active & updateActiveItem props according to this.state...
                 active: this.state.active,
-                // go through each of TabList's children...
-                children: child.props.children.map((tabListChild, i) => {
-                  // and inject _updateActiveItem (with this child's index)
-                  return React.cloneElement(tabListChild, {
-                    handleClick: this._updateActiveItem(i),
-                  })
-                }),
+                updateActiveItem: this._updateActiveItem,
               })
             }
             // inject active into TabContentList child:
