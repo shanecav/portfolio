@@ -5,27 +5,24 @@
 * @flow
 */
 
-// TODO: Shouldn't need this mock after upgrading to React 15.4
-//       https://github.com/facebook/jest/issues/1353
-jest.mock('react-dom')
-
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { shallow } from 'enzyme'
+import { shallowToJson } from 'enzyme-to-json'
 
 import { Tooltip } from './index'
 
 describe('<Tooltip />', () => {
   it('renders correctly when hidden', () => {
-    const tree = renderer.create(
+    const wrapper = shallow(
       <Tooltip show={false} text='Testing Hidden...' />
-    ).toJSON()
-    expect(tree).toMatchSnapshot()
+    )
+    expect(shallowToJson(wrapper)).toMatchSnapshot()
   })
 
   it('renders correctly when shown', () => {
-    const tree = renderer.create(
+    const wrapper = shallow(
       <Tooltip show text='Testing Shown...' />
-    ).toJSON()
-    expect(tree).toMatchSnapshot()
+    )
+    expect(shallowToJson(wrapper)).toMatchSnapshot()
   })
 })

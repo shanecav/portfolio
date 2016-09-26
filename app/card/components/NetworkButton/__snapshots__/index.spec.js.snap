@@ -1,17 +1,13 @@
 exports[`<NetworkButton /> renders correctly 1`] = `
 <div
   className="container">
-  <span
-    onClick={[Function anonymous]}
-    onTouchEnd={[Function anonymous]}
-    style={
-      Object {
-        "display": "inline-block",
-        "fontSize": 0,
-        "lineHeight": 0,
-        "position": "relative"
-      }
-    }>
+  <TouchFeedback
+    borderRadius={0}
+    color="black"
+    disabled={false}
+    growth={8}
+    type="ellipse"
+    url="https://github.com/shanecav">
     <a
       className="link"
       href="https://github.com/shanecav"
@@ -24,24 +20,9 @@ exports[`<NetworkButton /> renders correctly 1`] = `
         github.com/shanecav
       </span>
     </a>
-    0
-  </span>
-  <div
-    className="container">
-    <div
-      className="innerWrapper">
-      <div
-        className="inner"
-        style={
-          Object {
-            "opacity": 0,
-            "transform": "translate3d(0, 8px, 0) rotateX( -40deg )",
-            "visibility": "hidden"
-          }
-        }>
-        github.com/shanecav
-      </div>
-    </div>
-  </div>
+  </TouchFeedback>
+  <Tooltip
+    show={false}
+    text="github.com/shanecav" />
 </div>
 `;

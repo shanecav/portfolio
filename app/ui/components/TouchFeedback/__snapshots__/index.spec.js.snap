@@ -14,6 +14,5 @@ exports[`<TouchFeedback /> renders correctly 1`] = `
     className="test">
     Test Button
   </button>
-  0
 </span>
 `;

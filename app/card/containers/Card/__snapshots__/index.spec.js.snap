@@ -3,13 +3,9 @@ exports[`<Card /> renders correctly 1`] = `
   className="container">
   <div
     className="cardLeft">
-    <div
-      className="container">
-      <img
-        alt="Shane Cavaliere"
-        className="img"
-        src="http://d1x6pxn199r2dp.cloudfront.net/images/shanecavaliere-avatar.jpg" />
-    </div>
+    <CardPhoto
+      alt="Shane Cavaliere"
+      photoUrl="http://d1x6pxn199r2dp.cloudfront.net/images/shanecavaliere-avatar.jpg" />
   </div>
   <div
     className="cardRight">
@@ -21,249 +17,23 @@ exports[`<Card /> renders correctly 1`] = `
       className="title">
       full stack developer + designer
     </h3>
-    <ul
-      className="list">
-      <li
-        className="item">
-        <div
-          className="container">
-          <span
-            onClick={[Function anonymous]}
-            onTouchEnd={[Function anonymous]}
-            style={
-              Object {
-                "display": "inline-block",
-                "fontSize": 0,
-                "lineHeight": 0,
-                "position": "relative"
-              }
-            }>
-            <a
-              className="link"
-              href="https://github.com/shanecav"
-              onBlur={[Function anonymous]}
-              onFocus={[Function anonymous]}
-              onMouseEnter={[Function anonymous]}
-              onMouseLeave={[Function anonymous]}>
-              <span
-                className="github icon">
-                github.com/shanecav
-              </span>
-            </a>
-            0
-          </span>
-          <div
-            className="container">
-            <div
-              className="innerWrapper">
-              <div
-                className="inner"
-                style={
-                  Object {
-                    "opacity": 0,
-                    "transform": "translate3d(0, 8px, 0) rotateX( -40deg )",
-                    "visibility": "hidden"
-                  }
-                }>
-                github.com/shanecav
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li
-        className="item">
-        <div
-          className="container">
-          <span
-            onClick={[Function anonymous]}
-            onTouchEnd={[Function anonymous]}
-            style={
-              Object {
-                "display": "inline-block",
-                "fontSize": 0,
-                "lineHeight": 0,
-                "position": "relative"
-              }
-            }>
-            <a
-              className="link"
-              href="http://stackoverflow.com/users/1942085/shane-cavaliere"
-              onBlur={[Function anonymous]}
-              onFocus={[Function anonymous]}
-              onMouseEnter={[Function anonymous]}
-              onMouseLeave={[Function anonymous]}>
-              <span
-                className="stackoverflow icon">
-                stackoverflow.com/users/1942085/shane-cavaliere
-              </span>
-            </a>
-            0
-          </span>
-          <div
-            className="container">
-            <div
-              className="innerWrapper">
-              <div
-                className="inner"
-                style={
-                  Object {
-                    "opacity": 0,
-                    "transform": "translate3d(0, 8px, 0) rotateX( -40deg )",
-                    "visibility": "hidden"
-                  }
-                }>
-                stackoverflow.com/users/1942085/shane-cavaliere
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li
-        className="item">
-        <div
-          className="container">
-          <span
-            onClick={[Function anonymous]}
-            onTouchEnd={[Function anonymous]}
-            style={
-              Object {
-                "display": "inline-block",
-                "fontSize": 0,
-                "lineHeight": 0,
-                "position": "relative"
-              }
-            }>
-            <a
-              className="link"
-              href="https://linkedin.com/in/shanecavaliere"
-              onBlur={[Function anonymous]}
-              onFocus={[Function anonymous]}
-              onMouseEnter={[Function anonymous]}
-              onMouseLeave={[Function anonymous]}>
-              <span
-                className="linkedin icon">
-                linkedin.com/in/shanecavaliere
-              </span>
-            </a>
-            0
-          </span>
-          <div
-            className="container">
-            <div
-              className="innerWrapper">
-              <div
-                className="inner"
-                style={
-                  Object {
-                    "opacity": 0,
-                    "transform": "translate3d(0, 8px, 0) rotateX( -40deg )",
-                    "visibility": "hidden"
-                  }
-                }>
-                linkedin.com/in/shanecavaliere
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li
-        className="item">
-        <div
-          className="container">
-          <span
-            onClick={[Function anonymous]}
-            onTouchEnd={[Function anonymous]}
-            style={
-              Object {
-                "display": "inline-block",
-                "fontSize": 0,
-                "lineHeight": 0,
-                "position": "relative"
-              }
-            }>
-            <a
-              className="link"
-              href="https://twitter.com/shanecav"
-              onBlur={[Function anonymous]}
-              onFocus={[Function anonymous]}
-              onMouseEnter={[Function anonymous]}
-              onMouseLeave={[Function anonymous]}>
-              <span
-                className="twitter icon">
-                twitter.com/shanecav
-              </span>
-            </a>
-            0
-          </span>
-          <div
-            className="container">
-            <div
-              className="innerWrapper">
-              <div
-                className="inner"
-                style={
-                  Object {
-                    "opacity": 0,
-                    "transform": "translate3d(0, 8px, 0) rotateX( -40deg )",
-                    "visibility": "hidden"
-                  }
-                }>
-                twitter.com/shanecav
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-      <li
-        className="item">
-        <div
-          className="container">
-          <span
-            onClick={[Function anonymous]}
-            onTouchEnd={[Function anonymous]}
-            style={
-              Object {
-                "display": "inline-block",
-                "fontSize": 0,
-                "lineHeight": 0,
-                "position": "relative"
-              }
-            }>
-            <a
-              className="link"
-              href="mailto:shane@shanecavaliere.com"
-              onBlur={[Function anonymous]}
-              onFocus={[Function anonymous]}
-              onMouseEnter={[Function anonymous]}
-              onMouseLeave={[Function anonymous]}>
-              <span
-                className="email icon">
-                shane@shanecavaliere.com
-              </span>
-            </a>
-            0
-          </span>
-          <div
-            className="container">
-            <div
-              className="innerWrapper">
-              <div
-                className="inner"
-                style={
-                  Object {
-                    "opacity": 0,
-                    "transform": "translate3d(0, 8px, 0) rotateX( -40deg )",
-                    "visibility": "hidden"
-                  }
-                }>
-                shane@shanecavaliere.com
-              </div>
-            </div>
-          </div>
-        </div>
-      </li>
-    </ul>
+    <FlexGroupHorizontal>
+      <NetworkButton
+        link="https://github.com/shanecav"
+        type="github" />
+      <NetworkButton
+        link="http://stackoverflow.com/users/1942085/shane-cavaliere"
+        type="stackoverflow" />
+      <NetworkButton
+        link="https://linkedin.com/in/shanecavaliere"
+        type="linkedin" />
+      <NetworkButton
+        link="https://twitter.com/shanecav"
+        type="twitter" />
+      <NetworkButton
+        link="mailto:shane@shanecavaliere.com"
+        type="email" />
+    </FlexGroupHorizontal>
   </div>
 </div>
 `;

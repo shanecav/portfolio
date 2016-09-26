@@ -5,22 +5,19 @@
 * @flow
 */
 
-// TODO: Shouldn't need this mock after upgrading to React 15.4
-//       https://github.com/facebook/jest/issues/1353
-jest.mock('react-dom')
-
 import React from 'react'
-import renderer from 'react-test-renderer'
+import { shallow } from 'enzyme'
+import { shallowToJson } from 'enzyme-to-json'
 
 import { TouchFeedback } from './index'
 
 describe('<TouchFeedback />', () => {
   it('renders correctly', () => {
-    const tree = renderer.create(
+    const wrapper = shallow(
       <TouchFeedback type='ellipse'>
         <button className='test'>Test Button</button>
       </TouchFeedback>
-    ).toJSON()
-    expect(tree).toMatchSnapshot()
+    )
+    expect(shallowToJson(wrapper)).toMatchSnapshot()
   })
 })

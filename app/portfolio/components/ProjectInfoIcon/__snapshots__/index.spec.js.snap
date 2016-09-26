@@ -1,0 +1,16 @@
+exports[`<ProjectInfoIcon /> renders correctly 1`] = `
+<TouchFeedback
+  borderRadius={0}
+  color="#D2C3D8"
+  disabled={true}
+  growth={8}
+  type="rectangle">
+  <span
+    className="inner active">
+    <span
+      className="tech-icon icon">
+      Tech Stack
+    </span>
+  </span>
+</TouchFeedback>
+`;

@@ -19,6 +19,6 @@ describe('<ProjectInfoIcon />', () => {
     const wrapper = shallow(
       <ProjectInfoIcon {...sampleProps} />
     )
-    // expect(shallowToJson(wrapper)).toMatchSnapshot()
+    expect(shallowToJson(wrapper)).toMatchSnapshot()
   })
 })

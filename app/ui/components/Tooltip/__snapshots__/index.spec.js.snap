@@ -1,39 +1,71 @@
 exports[`<Tooltip /> renders correctly when hidden 1`] = `
 <div
   className="container">
-  <div
-    className="innerWrapper">
-    <div
-      className="inner"
-      style={
-        Object {
-          "opacity": 0,
-          "transform": "translate3d(0, 8px, 0) rotateX( -40deg )",
-          "visibility": "hidden"
+  <Motion
+    defaultStyle={
+      Object {
+        "opacity": 0,
+        "rotateX": -40,
+        "y": 8
+      }
+    }
+    style={
+      Object {
+        "opacity": Object {
+          "damping": 26,
+          "precision": 0.01,
+          "stiffness": 170,
+          "val": 0
+        },
+        "rotateX": Object {
+          "damping": 26,
+          "precision": 0.01,
+          "stiffness": 170,
+          "val": -40
+        },
+        "y": Object {
+          "damping": 26,
+          "precision": 0.01,
+          "stiffness": 170,
+          "val": 8
         }
-      }>
-      Testing Hidden...
-    </div>
-  </div>
+      }
+    } />
 </div>
 `;
 
 exports[`<Tooltip /> renders correctly when shown 1`] = `
 <div
   className="container show">
-  <div
-    className="innerWrapper">
-    <div
-      className="inner"
-      style={
-        Object {
-          "opacity": 0,
-          "transform": "translate3d(0, 8px, 0) rotateX( -40deg )",
-          "visibility": "hidden"
+  <Motion
+    defaultStyle={
+      Object {
+        "opacity": 0,
+        "rotateX": -40,
+        "y": 8
+      }
+    }
+    style={
+      Object {
+        "opacity": Object {
+          "damping": 26,
+          "precision": 0.01,
+          "stiffness": 170,
+          "val": 0.9
+        },
+        "rotateX": Object {
+          "damping": 26,
+          "precision": 0.01,
+          "stiffness": 170,
+          "val": 0
+        },
+        "y": Object {
+          "damping": 26,
+          "precision": 0.01,
+          "stiffness": 170,
+          "val": 0
         }
-      }>
-      Testing Shown...
-    </div>
-  </div>
+      }
+    } />
 </div>
 `;
