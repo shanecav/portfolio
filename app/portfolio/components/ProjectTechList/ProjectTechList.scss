@@ -1,0 +1,25 @@
+@import '_variables';
+@import '_mixins';
+
+.container {
+  font-family: 'Source Code Pro', monospace;
+  font-weight: 300;
+}
+
+.title {
+  margin: 0;
+  font-weight: 700;
+}
+
+.list {
+  margin: 5px 0;
+  padding: 0 0 0 15px;
+  list-style-type: none;
+  border-left: 1px solid #E8E8E8;
+}
+
+.listItem {
+  font-size: 13px;
+  line-height: 13px;
+  margin: 8px 0;
+}

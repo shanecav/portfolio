@@ -14,6 +14,9 @@ function loadStories () {
   require('../app/ui/components/Tabs/TabList/story.js')
   require('../app/ui/components/Tabs/Tabs/story.js')
   require('../app/portfolio/components/ProjectInfoIcon/story.js')
+  require('../app/portfolio/components/ProjectTech/story.js')
+  require('../app/portfolio/components/ProjectTechList/story.js')
+  require('../app/portfolio/components/ProjectDetails/story.js')
 }
 
 configure(loadStories, module)

@@ -1,0 +1,8 @@
+exports[`<ProjectInfoWrapper /> renders correctly 1`] = `
+<div
+  className="container">
+  <span>
+    Child
+  </span>
+</div>
+`;

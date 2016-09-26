@@ -1,0 +1,13 @@
+exports[`<ProjectHeading /> renders correctly 1`] = `
+<div
+  className="container">
+  <h3
+    className="title">
+    blockpop
+  </h3>
+  <h4
+    className="subheading">
+    Geo-based event & nightlife discovery
+  </h4>
+</div>
+`;

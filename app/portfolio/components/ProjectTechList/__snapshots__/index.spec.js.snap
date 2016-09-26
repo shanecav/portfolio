@@ -1,0 +1,43 @@
+exports[`<ProjectTechList /> renders correctly 1`] = `
+<div
+  className="container">
+  <h5
+    className="title">
+    \"
+    Server / API
+    \":
+    <br />
+    [
+  </h5>
+  <ul
+    className="list">
+    <li
+      className="listItem">
+      \"
+      Node.js
+      ,
+    </li>
+    <li
+      className="listItem">
+      \"
+      Express
+      ,
+    </li>
+    <li
+      className="listItem">
+      \"
+      RethinkDB
+      ,
+    </li>
+    <li
+      className="listItem">
+      \"
+      WebSockets
+    </li>
+  </ul>
+  <h5
+    className="title">
+    ]
+  </h5>
+</div>
+`;
