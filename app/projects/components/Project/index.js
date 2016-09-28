@@ -33,7 +33,7 @@ export class Project extends React.Component {
   constructor (props: Props) {
     super(props)
     this.state = {
-      open: props.media !== 'phone',
+      open: false,
       initialAnimationComplete: false,
     }
   }
@@ -44,7 +44,7 @@ export class Project extends React.Component {
         <div className={styles.imgContainer}>
           <Motion
             style={{
-              s: spring(this.state.open ? 1.1 : 1)
+              s: spring(this.state.open && this.props.media === 'phone' ? 1.1 : 1)
             }}
           >{({s}) => (
             <img
@@ -59,7 +59,7 @@ export class Project extends React.Component {
             <TouchPane onTouchEnd={this._toggleOpen}>
               <ProjectTitleMobile
                 title={this.props.project.title}
-                open={this.state.open} />
+                open={this.state.open && this.props.media === 'phone'} />
             </TouchPane>
           }
         </div>
@@ -75,10 +75,10 @@ export class Project extends React.Component {
                  : -1,
               o: this.props.media === 'phone'
                  ? spring(this.state.open ? 1 : 0)
-                 : this.state.open ? 1 : 0,
+                 : 1,
               y: this.props.media === 'phone'
                  ? spring(this.state.open ? 0 : 50)
-                 : this.state.open ? 0 : 50,
+                 : 0,
             }}
             onRest={this._setInitialAnimationComplete}
           >{({h, o, y}) => (

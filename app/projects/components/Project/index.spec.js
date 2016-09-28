@@ -15,25 +15,34 @@ import { sampleProps, samplePropsPhone } from './props'
 describe('<Project />', () => {
   // Snapshots
 
-  it('renders correctly', () => {
+  it('media!==phone renders correctly', () => {
     const wrapper = shallow(
       <Project {...sampleProps} />
     )
     expect(shallowToJson(wrapper)).toMatchSnapshot()
   })
 
-  // Unit Tests
-
-  it('state.open defaults to true when media !== phone', () => {
-    const wrapper = shallow(
-      <Project {...sampleProps} />
-    )
-    expect(wrapper.state('open')).toBe(true)
-  })
-
-  it('state.open defaults to false when media === phone', () => {
+  it('media===phone state.open===false renders correctly', () => {
     const wrapper = shallow(
       <Project {...samplePropsPhone} />
+    )
+    wrapper.setState({open: false})
+    expect(shallowToJson(wrapper)).toMatchSnapshot()
+  })
+
+  it('media===phone state.open===true renders correctly', () => {
+    const wrapper = shallow(
+      <Project {...samplePropsPhone} />
+    )
+    wrapper.setState({open: true})
+    expect(shallowToJson(wrapper)).toMatchSnapshot()
+  })
+
+  // Unit Tests
+
+  it('state.open defaults to false', () => {
+    const wrapper = shallow(
+      <Project {...sampleProps} />
     )
     expect(wrapper.state('open')).toBe(false)
   })

@@ -7,6 +7,7 @@ const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const SpritesmithPlugin = require('webpack-spritesmith')
 const CopyWebpackPlugin = require('copy-webpack-plugin')
+const autoprefixer = require('autoprefixer')
 
 const TARGET = process.env.npm_lifecycle_event
 
@@ -26,7 +27,7 @@ let common = {
     }, {
       test: /\.(jpe?g|png|gif|svg)$/i,
       loaders: [
-        'file?hash=sha512&digest=hex&name=[hash].[ext]',
+        'file?hash=sha512&digest=hex&name=images/[hash].[ext]',
         'image-webpack?bypassOnDebug&optimizationLevel=7&interlaced=false',
       ],
     }],
@@ -55,7 +56,7 @@ let common = {
     new CopyWebpackPlugin([
       {
         from: path.resolve(__dirname, 'content'),
-        to: path.resolve(__dirname, 'dist'),
+        to: path.resolve(__dirname, 'dist/content'),
       },
     ]),
   ],
@@ -65,6 +66,7 @@ let common = {
       path.resolve(__dirname, 'app/app/styles'),
     ],
   },
+  postcss: () => [autoprefixer],
 }
 
 if (TARGET !== 'storybook') {
@@ -74,6 +76,7 @@ if (TARGET !== 'storybook') {
         title: 'Shane Cavaliere - full stack developer + designer',
         template: path.resolve(__dirname, 'app/index.ejs'),
       }),
+      new DashboardPlugin(),
     ],
   })
 }
@@ -100,6 +103,7 @@ if (TARGET === 'start' || TARGET === 'storybook') {
               importLoaders: 2,
               localIdentName: '[name]__[local]___[hash:base64:5]',
             }),
+            'postcss',
             'sass?sourceMap',
           ],
           exclude: /node_modules/,
@@ -108,7 +112,6 @@ if (TARGET === 'start' || TARGET === 'storybook') {
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
-      new DashboardPlugin(),
     ],
   })
 }
@@ -120,7 +123,7 @@ if (TARGET === 'build') {
       './app',
     ],
     output: {
-      publicPath: '/dist/',
+      publicPath: '/',
     },
     module: {
       loaders: [
@@ -136,8 +139,7 @@ if (TARGET === 'build') {
             'css?modules&' + qs.stringify({
               importLoaders: 2,
               localIdentName: '[name]__[local]___[hash:base64:5]',
-            }),
-            'sass'
+            }) + '!postcss!sass?sourceMap'
           ),
           exclude: /node_modules/,
         },

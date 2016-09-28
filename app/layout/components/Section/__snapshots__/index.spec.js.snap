@@ -1,0 +1,8 @@
+exports[`<Section /> renders correctly 1`] = `
+<section
+  className="container">
+  <p>
+    Sample content...
+  </p>
+</section>
+`;

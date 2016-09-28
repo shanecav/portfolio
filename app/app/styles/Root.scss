@@ -1,0 +1,7 @@
+@import '_variables';
+@import '_mixins';
+
+.container {
+  max-width: map-get($breakpoints, 'desktop');
+  margin: 0 auto;
+}

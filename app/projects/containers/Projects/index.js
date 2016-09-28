@@ -15,7 +15,6 @@ import styles from './Projects.scss'
 import type { Props } from './props'
 
 export const Projects: (props:Props)=>React.Element<*> = ({ projects }: Props) => {
-  console.log('Projects', projects)
   return (
     <div className={styles.container}>
       {projects.map((project, i) => (
@@ -26,7 +25,8 @@ export const Projects: (props:Props)=>React.Element<*> = ({ projects }: Props) =
 }
 
 const mapStateToProps = (state: Object, props: Props) => ({
-  projects: projectsSelector(state),
+  projects: projectsSelector.data(state),
+  fetchStatus: projectsSelector.fetchStatus(state),
 })
 
 export default connect(

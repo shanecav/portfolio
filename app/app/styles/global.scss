@@ -1,11 +1,10 @@
-@import '_variables';
-
 // Normalize
-:global {
-  @import '../../../node_modules/normalize.css/normalize.css';
-  html {
-    box-sizing: border-box;
-  }
+@import '../../../node_modules/normalize.css/normalize.css';
+html {
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
 }
 
 // Global Typography

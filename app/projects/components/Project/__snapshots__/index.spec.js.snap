@@ -1,4 +1,83 @@
-exports[`<Project /> renders correctly 1`] = `
+exports[`<Project /> media!==phone renders correctly 1`] = `
+<div
+  className="container">
+  <div
+    className="imgContainer">
+    <Motion
+      style={
+        Object {
+          "s": Object {
+            "damping": 26,
+            "precision": 0.01,
+            "stiffness": 170,
+            "val": 1
+          }
+        }
+      } />
+  </div>
+  <Motion
+    onRest={[Function anonymous]}
+    style={
+      Object {
+        "h": -1,
+        "o": 1,
+        "y": 0
+      }
+    } />
+</div>
+`;
+
+exports[`<Project /> media===phone state.open===false renders correctly 1`] = `
+<div
+  className="container">
+  <div
+    className="imgContainer">
+    <Motion
+      style={
+        Object {
+          "s": Object {
+            "damping": 26,
+            "precision": 0.01,
+            "stiffness": 170,
+            "val": 1
+          }
+        }
+      } />
+    <TouchPane
+      onTouchEnd={[Function anonymous]}>
+      <ProjectTitleMobile
+        open={false}
+        title="blockpop" />
+    </TouchPane>
+  </div>
+  <Motion
+    onRest={[Function anonymous]}
+    style={
+      Object {
+        "h": Object {
+          "damping": 26,
+          "precision": 0.01,
+          "stiffness": 170,
+          "val": 0
+        },
+        "o": Object {
+          "damping": 26,
+          "precision": 0.01,
+          "stiffness": 170,
+          "val": 0
+        },
+        "y": Object {
+          "damping": 26,
+          "precision": 0.01,
+          "stiffness": 170,
+          "val": 50
+        }
+      }
+    } />
+</div>
+`;
+
+exports[`<Project /> media===phone state.open===true renders correctly 1`] = `
 <div
   className="container">
   <div
@@ -14,14 +93,35 @@ exports[`<Project /> renders correctly 1`] = `
           }
         }
       } />
+    <TouchPane
+      onTouchEnd={[Function anonymous]}>
+      <ProjectTitleMobile
+        open={true}
+        title="blockpop" />
+    </TouchPane>
   </div>
   <Motion
     onRest={[Function anonymous]}
     style={
       Object {
-        "h": -1,
-        "o": 1,
-        "y": 0
+        "h": Object {
+          "damping": 26,
+          "precision": 0.01,
+          "stiffness": 170,
+          "val": 0
+        },
+        "o": Object {
+          "damping": 26,
+          "precision": 0.01,
+          "stiffness": 170,
+          "val": 1
+        },
+        "y": Object {
+          "damping": 26,
+          "precision": 0.01,
+          "stiffness": 170,
+          "val": 0
+        }
       }
     } />
 </div>

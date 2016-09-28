@@ -1,0 +1,22 @@
+exports[`<Clients /> renders correctly 1`] = `
+<div
+  className="container">
+  <h4
+    className="heading">
+    Past Clients
+  </h4>
+  <p
+    className="subHeading">
+    (I worked with some of these clients as a sub-contractor for other agencies)
+  </p>
+  <ul
+    className="clientList">
+    <li>
+      ABC
+    </li>
+    <li>
+      XYZ
+    </li>
+  </ul>
+</div>
+`;

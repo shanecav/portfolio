@@ -4,21 +4,40 @@
 .container {
   display: flex;
   flex-direction: row;
-  justify-content: flex-start;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 0;
+  @include media('<=phone') {
+    display: block;
+    padding: 0;
+  }
 }
 
-.cardLeft {
+.badge {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  @include media('<desktop') {
+    margin-left: 30px;
+  }
+  @include media('<=phone') {
+    margin-left: 0;
+    text-align: center;
+  }
+}
+
+.badgeLeft {
   flex-grow: 0;
   margin-right: 1rem;
 }
 
-.cardRight {
+.badgeRight {
   flex-grow: 1;
 }
 
 .name {
-  margin-top: 5px;
-  margin-bottom: 6px;
+  margin-top: 20px;
+  margin-bottom: 2px;
   @include media('<=phone') {
     margin-top: 0;
     margin-bottom: 4px;
@@ -31,5 +50,19 @@
   margin-bottom: 15px;
   @include media('<=phone') {
     margin-bottom: 10px;
+  }
+}
+
+.networks {
+  display: flex;
+  align-items: center;
+  margin-right: 30px;
+  @include media('<desktop') {
+    margin-right: 80px;
+  }
+  @include media('<=phone') {
+    margin-top: 4px;
+    margin-right: 0;
+    justify-content: center;
   }
 }

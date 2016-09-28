@@ -3,11 +3,11 @@
 
 .container {
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
   padding: 60px 0;
   @include media('>phone') {
-    padding: 170px 0;
+    padding: 70px 0;
   }
 }
 

@@ -11,14 +11,16 @@
     font-style: normal;
     font-weight: 300;
     font-size: 20px;
-    line-height: 28px;
+    line-height: 32px;
     color: $gray;
   }
 
   h1 {
+    color: $darkPurple;
     font-size: 36px;
     line-height: 36px;
     font-weight: 700;
+    text-transform: uppercase;
     @include media('<=phone') {
       font-size: 24px;
       line-height: 24px;
@@ -39,6 +41,7 @@
     font-size: 24px;
     line-height: 28px;
     font-weight: 700;
+    color: $darkPurple;
     @include media('<=phone') {
       font-size: 18px;
       line-height: 18px;
@@ -46,9 +49,11 @@
   }
 
   h4 {
-    font-size: 14px;
-    line-height: 14px;
+    font-size: 16px;
+    line-height: 20px;
     font-weight: 700;
+    text-transform: uppercase;
+    color: $purple;
   }
 
   h5 {

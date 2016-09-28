@@ -2,21 +2,21 @@ exports[`<Card /> renders correctly 1`] = `
 <div
   className="container">
   <div
-    className="cardLeft">
-    <CardPhoto
-      alt="Shane Cavaliere"
-      photoUrl="http://d1x6pxn199r2dp.cloudfront.net/images/shanecavaliere-avatar.jpg" />
+    className="badge">
+    <div
+      className="badgeRight">
+      <h1
+        className="name">
+        Shane Cavaliere
+      </h1>
+      <h3
+        className="title">
+        full stack developer + designer
+      </h3>
+    </div>
   </div>
   <div
-    className="cardRight">
-    <h1
-      className="name">
-      Shane Cavaliere
-    </h1>
-    <h3
-      className="title">
-      full stack developer + designer
-    </h3>
+    className="networks">
     <FlexGroupHorizontal>
       <NetworkButton
         link="https://github.com/shanecav"

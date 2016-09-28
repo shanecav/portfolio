@@ -1,0 +1,9 @@
+@import '_variables';
+@import '_mixins';
+
+.container {
+  margin: 50px 20px;
+  @include media('>phone') {
+    margin: 130px 120px;
+  }
+}

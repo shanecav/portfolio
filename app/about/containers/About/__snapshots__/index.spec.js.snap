@@ -1,0 +1,14 @@
+exports[`<About /> renders correctly 1`] = `
+<div
+  className="container">
+  <h4>
+    About Me
+  </h4>
+  <p>
+    Some sample content!
+  </p>
+  <p>
+    And some more...
+  </p>
+</div>
+`;
