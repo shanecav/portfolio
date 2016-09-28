@@ -14,6 +14,7 @@ import Section from '../layout/components/Section'
 import About from '../about/containers/About'
 import Clients from '../clients/containers/Clients'
 import styles from './styles/Root.scss'
+import Footer from '../layout/components/Footer'
 
 const Root = () => {
   return (
@@ -28,6 +29,7 @@ const Root = () => {
       <Section>
         <Clients />
       </Section>
+      <Footer />
     </div>
   )
 }

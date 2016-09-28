@@ -1,0 +1,24 @@
+@import '_variables';
+@import '_mixins';
+
+.container {
+  text-align: center;
+}
+
+.copyright {
+
+}
+
+.link {
+  font-size: 18px;
+  margin-top: 0;
+  color: $purple;
+  text-decoration: none;
+  display: inline-block;
+  padding: 5px 15px;
+  border: 1px solid #F1D6EF;
+  transition-duration: $transition-duration;
+  &:hover {
+    border: 1px solid $purple;
+  }
+}
