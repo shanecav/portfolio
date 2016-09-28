@@ -17,6 +17,7 @@ import styles from './TabContentList.scss'
 import type { Props } from './props'
 type State = {
   height: number,
+  initialAnimationComplete: boolean,
 }
 
 export class TabContentList extends Component {
@@ -34,6 +35,7 @@ export class TabContentList extends Component {
     super(props)
     this.state = {
       height: 0,
+      initialAnimationComplete: false,
     }
     this.childRefs = []
   }
@@ -60,11 +62,14 @@ export class TabContentList extends Component {
 
   render () {
     return (
-      <Motion style={{
-        h: this.props.height === 'current'
-           ? spring(this.state.height)
-           : this.state.height,
-      }}>{({h}) => (
+      <Motion
+        style={{
+          h: this.props.height === 'current' && this.state.initialAnimationComplete
+             ? spring(this.state.height)
+             : this.state.height,
+        }}
+        onRest={this._setInitialAnimationComplete}
+      >{({h}) => (
 
         <div className={styles.container} style={{height: h}}>
           {React.Children.map(this.props.children, (child, i) => {
@@ -123,6 +128,14 @@ export class TabContentList extends Component {
   _addToChildRefs = (node: any) => {
     if (node) {
       this.childRefs.push(node)
+    }
+  }
+
+  _setInitialAnimationComplete = () => {
+    if (!this.state.initialAnimationComplete) {
+      this.setState({
+        initialAnimationComplete: true,
+      })
     }
   }
 }

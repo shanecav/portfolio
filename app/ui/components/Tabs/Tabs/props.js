@@ -8,7 +8,7 @@
 import React from 'react'
 
 import TabList from '../TabList'
-import ProjectInfoIcon from '../../../../portfolio/components/ProjectInfoIcon'
+import ProjectInfoIcon from '../../../../projects/components/ProjectInfoIcon'
 import TabContentList from '../TabContentList'
 
 import { sampleProps as tabListSampleProps } from '../TabList/props'

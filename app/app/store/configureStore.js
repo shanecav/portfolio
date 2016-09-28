@@ -2,16 +2,13 @@
 
 import { compose, applyMiddleware, createStore } from 'redux'
 import createSagaMiddleware from 'redux-saga'
+import { createResponsiveStoreEnhancer } from 'redux-responsive'
 
 import rootReducer from '../reducers'
 
-import type { Record } from 'immutable'
-import type { ProfileState } from '../../card/reducers'
-type InitialState = Record<{
-  profile: ProfileState,
-}>
+import type { Map } from 'immutable'
 
-export default function configureStore (initialState: ?InitialState) {
+export default function configureStore (initialState: ?Map<string, *>) {
   const sagaMiddleware = createSagaMiddleware()
   return {
     ...createStore(
@@ -19,6 +16,7 @@ export default function configureStore (initialState: ?InitialState) {
       initialState,
       compose(
         applyMiddleware(sagaMiddleware),
+        createResponsiveStoreEnhancer(),
         window.devToolsExtension ? window.devToolsExtension() : f => f
       ),
     ),

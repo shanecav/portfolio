@@ -1,0 +1,8 @@
+exports[`<TouchPane /> renders correctly 1`] = `
+<a
+  className="container">
+  <span>
+    Test
+  </span>
+</a>
+`;

@@ -20,10 +20,10 @@ import styles from './ProjectDetails.scss'
 
 import type { Props } from './props'
 
-export const ProjectDetails: (props:Props)=>React.Element<*> = ({ title, subheading, description, role, server, client }: Props) => {
+export const ProjectDetails: (props:Props)=>React.Element<*> = ({ project }: Props) => {
   return (
     <div className={styles.container}>
-      <ProjectHeading title={title} subheading={subheading} />
+      <ProjectHeading title={project.title} subheading={project.subheading} />
 
       <Tabs>
         <TabList>
@@ -33,13 +33,13 @@ export const ProjectDetails: (props:Props)=>React.Element<*> = ({ title, subhead
 
         <TabContentList>
           <ProjectInfoWrapper>
-            <p>{description}</p>
+            <p>{project.description}</p>
             <h5>My Role:</h5>
-            <p>{role}</p>
+            <p>{project.role}</p>
           </ProjectInfoWrapper>
 
           <ProjectInfoWrapper>
-            <ProjectTech server={server} client={client} />
+            <ProjectTech server={project.server} client={project.client} />
           </ProjectInfoWrapper>
         </TabContentList>
       </Tabs>

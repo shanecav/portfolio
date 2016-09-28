@@ -1,0 +1,17 @@
+exports[`<ProjectTitleMobile /> renders correctly 1`] = `
+<h3
+  className="container open">
+  Sample Title
+  <Motion
+    style={
+      Object {
+        "r": Object {
+          "damping": 26,
+          "precision": 0.01,
+          "stiffness": 170,
+          "val": 180
+        }
+      }
+    } />
+</h3>
+`;

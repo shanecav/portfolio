@@ -12,17 +12,17 @@ import FETCH_STATUS from '../../app/constants/fetch-status'
 import ProfileRecord from '../records/Profile'
 
 describe('profile reducer', () => {
-  test('state defaults to an empty ProfileState', () => {
+  it('state defaults to an empty ProfileState', () => {
     const initialState = profileReducer(undefined, {})
     expect(initialState).toEqual(ProfileState())
   })
 
-  test('FETCH_PROFILE_REQUEST updates fetchStatus', () => {
+  it('FETCH_PROFILE_REQUEST updates fetchStatus', () => {
     const state = profileReducer(undefined, actions.profile.request())
     expect(state.fetchStatus).toEqual(FETCH_STATUS.FETCHING)
   })
 
-  test('FETCH_PROFILE_SUCCESS updates profile', () => {
+  it('FETCH_PROFILE_SUCCESS updates data', () => {
     const profileObject = {
       name: 'Shane',
       photoUrl: 'test',
@@ -33,7 +33,7 @@ describe('profile reducer', () => {
     expect(state.data).toEqual(ProfileRecord(profileObject))
   })
 
-  test('FETCH_PROFILE_SUCCESS updates fetchStatus', () => {
+  it('FETCH_PROFILE_SUCCESS updates fetchStatus', () => {
     const profileObject = {
       name: 'Shane',
       photoUrl: 'test',
@@ -44,7 +44,7 @@ describe('profile reducer', () => {
     expect(state.fetchStatus).toEqual(FETCH_STATUS.FETCHED)
   })
 
-  test('FETCH_PROFILE_FAIL updates fetchStatus', () => {
+  it('FETCH_PROFILE_FAIL updates fetchStatus', () => {
     const state = profileReducer(undefined, actions.profile.failure())
     expect(state.fetchStatus).toEqual(FETCH_STATUS.ERROR)
   })

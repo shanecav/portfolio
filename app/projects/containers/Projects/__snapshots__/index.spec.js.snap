@@ -1,0 +1,30 @@
+exports[`<Projects /> renders correctly 1`] = `
+<div
+  className="container">
+  <Connect(Project)
+    project={
+      Object {
+        "media": "desktop",
+        "project": Object {
+          "client": Array [
+            "React Native",
+            "Redux",
+            "redux-saga",
+            "Exponent"
+          ],
+          "description": "I’m currently building blockpop with a small team. This project has not yet launched, but a preview build of the app will be available soon.",
+          "image": "http://d1x6pxn199r2dp.cloudfront.net/images/blockpop.jpg",
+          "role": "Design & development lead",
+          "server": Array [
+            "Node.js",
+            "Express",
+            "RethinkDB",
+            "WebSockets"
+          ],
+          "subheading": "Geo-based event & nightlife discovery",
+          "title": "blockpop"
+        }
+      }
+    } />
+</div>
+`;

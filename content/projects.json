@@ -9,7 +9,7 @@
       "Node.js",
       "Express",
       "RethinkDB",
-      "WebSockets",
+      "WebSockets"
     ],
     "client": [
       "React Native",
@@ -26,7 +26,7 @@
     "role": "Planning, design, & development",
     "server": [
       "WordPress/PHP",
-      "USGS Water Services",
+      "USGS Water Services"
     ],
     "client": [
       "React.js",

@@ -1,0 +1,28 @@
+exports[`<Project /> renders correctly 1`] = `
+<div
+  className="container">
+  <div
+    className="imgContainer">
+    <Motion
+      style={
+        Object {
+          "s": Object {
+            "damping": 26,
+            "precision": 0.01,
+            "stiffness": 170,
+            "val": 1.1
+          }
+        }
+      } />
+  </div>
+  <Motion
+    onRest={[Function anonymous]}
+    style={
+      Object {
+        "h": -1,
+        "o": 1,
+        "y": 0
+      }
+    } />
+</div>
+`;

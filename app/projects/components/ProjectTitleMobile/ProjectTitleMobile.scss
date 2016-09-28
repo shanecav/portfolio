@@ -1,0 +1,25 @@
+@import '_variables';
+@import '_mixins';
+@import 'sprite.scss';
+
+.container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  margin: 0;
+  padding: 12px 20px;
+  background: #22022D;
+  color: white;
+  transition-duration: 0.4s;
+  &.open {
+    background: white;
+    color: $darkPurple;
+  }
+}
+
+.inlineIcon {
+  display: inline-block;
+  margin-left: 15px;
+}
+
+@include retina-sprites(($caret-group,));

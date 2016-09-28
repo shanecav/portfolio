@@ -162,9 +162,10 @@ export class TouchFeedback extends Component {
     }
   }
 
-  _handleClick = () => {
+  _handleClick = (e: any) => {
     if (!this.props.disabled && this.state.touchable) {
       if (this.props.url) {
+        e.preventDefault()
         setTimeout(() => { window.location = this.props.url }, 300)
       }
       this.setState((state) => ({

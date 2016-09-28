@@ -1,3 +1,5 @@
+@import '_variables';
+
 // Normalize
 :global {
   @import '../../../node_modules/normalize.css/normalize.css';
@@ -7,4 +9,4 @@
 }
 
 // Global Typography
-@import './_typography';
+@import '_typography';

@@ -7,7 +7,7 @@
 
 import React from 'react'
 
-import ProjectInfoIcon from '../../../../portfolio/components/ProjectInfoIcon'
+import ProjectInfoIcon from '../../../../projects/components/ProjectInfoIcon'
 
 export type Props = {
   active?: number,

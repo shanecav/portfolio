@@ -13,10 +13,11 @@ function loadStories () {
   require('../app/ui/components/Tabs/TabItem/story.js')
   require('../app/ui/components/Tabs/TabList/story.js')
   require('../app/ui/components/Tabs/Tabs/story.js')
-  require('../app/portfolio/components/ProjectInfoIcon/story.js')
-  require('../app/portfolio/components/ProjectTech/story.js')
-  require('../app/portfolio/components/ProjectTechList/story.js')
-  require('../app/portfolio/components/ProjectDetails/story.js')
+  require('../app/projects/components/ProjectInfoIcon/story.js')
+  require('../app/projects/components/ProjectTech/story.js')
+  require('../app/projects/components/ProjectTechList/story.js')
+  require('../app/projects/components/ProjectDetails/story.js')
+  require('../app/projects/components/Project/story.js')
 }
 
 configure(loadStories, module)

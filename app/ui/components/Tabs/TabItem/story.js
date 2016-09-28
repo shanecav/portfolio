@@ -9,7 +9,7 @@ import React from 'react'
 import { storiesOf, action } from '@kadira/storybook'
 
 import { TabItem } from './index'
-import ProjectInfoIcon from '../../../../portfolio/components/ProjectInfoIcon'
+import ProjectInfoIcon from '../../../../projects/components/ProjectInfoIcon'
 
 storiesOf('TabItem', module)
   .add('desc', () => {

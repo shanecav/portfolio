@@ -1,0 +1,44 @@
+@import '_variables';
+@import '_mixins';
+
+.container {
+  overflow: hidden;
+  @include media('>phone') {
+    display: flex;
+    border-top: 1px solid #E1E1E1;
+    margin-right: 30px;
+    max-height: 400px;
+  }
+}
+
+.imgContainer {
+  position: relative;
+  overflow: hidden;
+  img {
+    display: block;
+    width: 100%;
+    height: auto;
+  }
+  @include media('>phone') {
+    width: 60%;
+  }
+}
+
+.image {
+  display: block;
+}
+
+.detailsContainer {
+  position: relative;
+  overflow: hidden;
+  @include media('>phone') {
+    width: 40%;
+  }
+}
+
+.detailsInner {
+  padding: 20px;
+  @include media('>phone') {
+    padding: 25px 0 10px 25px;
+  }
+}

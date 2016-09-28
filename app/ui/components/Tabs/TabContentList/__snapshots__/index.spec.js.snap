@@ -1,5 +1,6 @@
 exports[`<TabContentList /> active=0 (default height) renders correctly 1`] = `
 <Motion
+  onRest={[Function anonymous]}
   style={
     Object {
       "h": 0
@@ -9,6 +10,7 @@ exports[`<TabContentList /> active=0 (default height) renders correctly 1`] = `
 
 exports[`<TabContentList /> active=1 (default height) renders correctly 1`] = `
 <Motion
+  onRest={[Function anonymous]}
   style={
     Object {
       "h": 0
@@ -18,14 +20,10 @@ exports[`<TabContentList /> active=1 (default height) renders correctly 1`] = `
 
 exports[`<TabContentList /> height=current renders correctly 1`] = `
 <Motion
+  onRest={[Function anonymous]}
   style={
     Object {
-      "h": Object {
-        "damping": 27,
-        "precision": 0.01,
-        "stiffness": 250,
-        "val": 0
-      }
+      "h": 0
     }
   } />
 `;

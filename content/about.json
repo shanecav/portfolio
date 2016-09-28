@@ -1,0 +1,5 @@
+{
+  "content": "<p>I’m a full stack developer and designer with nine years of professional experience. I’m currently working with a small team building blockpop, a geo-based event & nightlife discovery app. In addition, I do contract and sub-contract work for various organizations and agencies.</p>
+  <p>I specialize in front end development with React, Redux, and their surrounding ecosystems, but I’m comfortable writing clean, maintainable, performant JavaScript in any setting. I’m experienced with modern JavaScript toolchains & workflows, and use Webpack, Babel (ES6/ES7), Flow, and git on a regular basis. I practice Test-Driven Development, and have experience using mocha, tape, Jest, nyc, enzyme, chai, and sinon.</p><p>
+  <p>In addition to front end development, I have experience building back end interfaces with Node.js and PHP. I’ve built APIs that utilize both REST and WebSockets. I have experience with SQL databases (PostgreSQL and MySQL), object databases (MongoDB, CouchDB, and RethinkDB), and Redis.</p>"
+}
