@@ -1,0 +1,18 @@
+exports[`<Footer /> renders correctly 1`] = `
+<div
+  className="container">
+  <h5
+    className="copyright">
+    ©
+    2016
+     Shane Cavaliere
+  </h5>
+  <p>
+    <a
+      className="link"
+      href="https://github.com/shanecav/portfolio">
+      View this site\'s code on GitHub
+    </a>
+  </p>
+</div>
+`;
