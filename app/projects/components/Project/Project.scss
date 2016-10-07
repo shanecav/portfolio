@@ -4,11 +4,16 @@
 .container {
   overflow: hidden;
   border-bottom: 1px solid #E1E1E1;
+  padding-bottom: 2px;
+  &:last-child {
+    padding-bottom: 0;
+  }
   @include media('>phone') {
     display: flex;
     border-bottom: none;
     border-top: 1px solid #E1E1E1;
     margin-right: 30px;
+    padding-bottom: 0;
     max-height: 400px;
   }
 }
