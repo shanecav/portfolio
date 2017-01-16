@@ -9,14 +9,14 @@ import fetchEntity from '../../app/sagas/fetchEntity'
 
 const loadProfile = fetchEntity.bind(null, actions.profile, api.getProfile)
 
-function * watchFetchProjectsRequest (): Generator<*, *, *> {
+function * watchFetchProfileRequest (): Generator<*, *, *> {
   yield * takeLatest(actions.FETCH_PROFILE_REQUEST, loadProfile)
 }
 
 export default function * cardSaga (): Generator<*, *, *> {
   yield [
     // setup
-    fork(watchFetchProjectsRequest),
+    fork(watchFetchProfileRequest),
 
     // init
     put(actions.profile.request()),

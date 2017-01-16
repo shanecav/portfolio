@@ -6,14 +6,14 @@ import React from 'react'
 import ReactDOM from 'react-dom'
 import { AppContainer } from 'react-hot-loader'
 import { Provider } from 'react-redux'
+import { FirebaseProvider } from 'firebase-react'
 
 import './app/styles/global.scss'
 import Root from './app/Root'
 import configureStore from './app/store/configureStore'
-import rootSaga from './app/sagas'
+import firebaseApp from './app/api/firebase'
 
 const store = configureStore()
-store.runSaga(rootSaga)
 
 const appNode = document.createElement('div')
 document.body.appendChild(appNode)
@@ -22,7 +22,9 @@ const renderRoot = (RootComponent) => {
   ReactDOM.render(
     <AppContainer>
       <Provider store={store}>
-        <RootComponent />
+        <FirebaseProvider firebase={firebaseApp}>
+          <RootComponent />
+        </FirebaseProvider>
       </Provider>
     </AppContainer>,
     appNode
@@ -31,6 +33,7 @@ const renderRoot = (RootComponent) => {
 renderRoot(Root)
 
 if (module.hot) {
+  // $FlowIgnore
   module.hot.accept('./app/Root', () => {
     const NewRoot = require('./app/Root').default
     renderRoot(NewRoot)

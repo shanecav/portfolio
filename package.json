@@ -18,6 +18,8 @@
   },
   "dependencies": {
     "classnames": "^2.2.5",
+    "firebase": "^3.6.5",
+    "firebase-react": "^0.0.3",
     "immutable": "^3.8.1",
     "include-media": "^1.4.8",
     "isomorphic-fetch": "^2.2.1",
@@ -32,7 +34,6 @@
     "redux-actions": "^0.12.0",
     "redux-immutable": "^3.0.8",
     "redux-responsive": "^3.1.4",
-    "redux-saga": "^0.11.1",
     "reselect": "^2.5.3"
   },
   "devDependencies": {
