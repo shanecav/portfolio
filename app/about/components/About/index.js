@@ -6,7 +6,6 @@
 */
 
 import React from 'react'
-import { firebaseConnect } from 'firebase-react'
 
 import styles from './About.scss'
 import Loading from '../../../ui/components/Loading'
@@ -25,6 +24,4 @@ export const About = ({ about }: Props) => {
   )
 }
 
-export default firebaseConnect((db, props) => ({
-  about: db.ref('about'),
-}))(About)
+export default About

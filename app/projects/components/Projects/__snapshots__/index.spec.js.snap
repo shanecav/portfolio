@@ -1,11 +1,10 @@
 exports[`<Projects /> renders correctly 1`] = `
 <div
   className="container">
-  <Connect(Project)
-    project={
-      Object {
-        "media": "desktop",
-        "project": Object {
+  <StaggeredRise>
+    <Connect(Project)
+      project={
+        Object {
           "client": Array [
             "React Native",
             "Redux",
@@ -24,7 +23,7 @@ exports[`<Projects /> renders correctly 1`] = `
           "subheading": "Geo-based event & nightlife discovery",
           "title": "blockpop"
         }
-      }
-    } />
+      } />
+  </StaggeredRise>
 </div>
 `;

@@ -10,7 +10,7 @@ import { networkObjects } from '../../../ui/components/FlexGroupHorizontal/props
 import type { Props as Network } from '../../components/NetworkButton/props'
 
 export type Props = {
-  profile?: {
+  profile: {
     name: string,
     photoUrl: string,
     title: string,
