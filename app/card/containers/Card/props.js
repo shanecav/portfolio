@@ -5,28 +5,24 @@
 * @flow
 */
 
-import {
-  List,
-} from 'immutable'
-
 import { networkObjects } from '../../../ui/components/FlexGroupHorizontal/props'
-import ProfileRecord from '../../records/Profile'
-import NetworkRecord from '../../records/Network'
-import FETCH_STATUS from '../../../app/constants/fetch-status'
+
+import type { Props as Network } from '../../components/NetworkButton/props'
 
 export type Props = {
-  profile: ProfileRecord,
-  fetchStatus: string,
+  profile?: {
+    name: string,
+    photoUrl: string,
+    title: string,
+    networks: Array<Network>,
+  },
 }
 
-const profile = ProfileRecord({
-  name: 'Shane Cavaliere',
-  photoUrl: 'http://d1x6pxn199r2dp.cloudfront.net/images/shanecavaliere-avatar.jpg',
-  title: 'full stack developer + designer',
-  networks: List(networkObjects).map(network => NetworkRecord(network)),
-})
-
 export const sampleProps: Props = {
-  profile,
-  fetchStatus: FETCH_STATUS.FETCHED,
+  profile: {
+    name: 'Shane Cavaliere',
+    photoUrl: 'http://d1x6pxn199r2dp.cloudfront.net/images/shanecavaliere-avatar.jpg',
+    title: 'full stack developer + designer',
+    networks: networkObjects,
+  },
 }

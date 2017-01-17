@@ -1,8 +1,0 @@
-// @flow
-
-import type {
-  List,
-} from 'immutable'
-
-import type NetworkRecord from '../records/Network'
-export type Networks = List<NetworkRecord>

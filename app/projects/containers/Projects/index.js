@@ -10,13 +10,15 @@ import { firebaseConnect } from 'firebase-react'
 
 import Project from '../../components/Project'
 import styles from './Projects.scss'
+import Loading from '../../../ui/components/Loading'
 
 import type { Props } from './props'
 
-export const Projects: (props:Props)=>React.Element<*> = ({ projects }: Props) => {
+export const Projects = ({ projects }: Props) => {
+  if (!projects) return <Loading text='Loading projects...' />
   return (
     <div className={styles.container}>
-      {projects && projects.map((project, i) => (
+      {projects.map((project, i) => (
         <Project key={i} project={project} />
       ))}
     </div>

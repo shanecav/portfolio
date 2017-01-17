@@ -11,7 +11,7 @@ import styles from './ProjectHeading.scss'
 
 import type { Props } from './props'
 
-export const ProjectHeading: (props:Props)=>React.Element<*> = ({ title, subheading }: Props) => {
+export const ProjectHeading = ({ title, subheading }: Props) => {
   return (
     <div className={styles.container}>
       <h3 className={styles.title}>{title}</h3>

@@ -5,25 +5,24 @@
 * @flow
 */
 
-import { List } from 'immutable'
-
 import { sampleProps as techSampleProps } from '../ProjectTech/props'
-import ProjectRecord from '../../records/Project'
+
+export type ProjectDetails = {
+  image: string,
+  title: string,
+  subheading: string,
+  description: string,
+  role: string,
+  server: Array<string>,
+  client: Array<string>,
+}
 
 export type Props = {
-  project: ProjectRecord<{
-    image: string,
-    title: string,
-    subheading: string,
-    description: string,
-    role: string,
-    server: List<string>,
-    client: List<string>,
-  }>,
+  project: ProjectDetails,
 }
 
 export const sampleProps: Props = {
-  project: ProjectRecord({
+  project: {
     image: 'http://d1x6pxn199r2dp.cloudfront.net/images/blockpop.jpg',
     title: 'blockpop',
     subheading: 'Geo-based event & nightlife discovery',
@@ -31,5 +30,5 @@ export const sampleProps: Props = {
     role: 'Design & development lead',
     server: techSampleProps.server,
     client: techSampleProps.client,
-  }),
+  },
 }

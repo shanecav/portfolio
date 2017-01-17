@@ -8,4 +8,4 @@ const springConfig = {
   precision: 0.01,
 }
 
-export default (value) => spring(value, springConfig)
+export default (value: *) => spring(value, springConfig)

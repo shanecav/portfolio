@@ -47,7 +47,7 @@ export class TabList extends Component {
                 <TabItem
                   key={i}
                   active={active}
-                  updateActiveItem={this.props.updateActiveItem(i)}
+                  updateActiveItem={this.props.updateActiveItem && this.props.updateActiveItem(i)}
                   refFn={active ? this._activeTabItemRef : undefined}
                 >
                   {child}

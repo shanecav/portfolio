@@ -17,7 +17,7 @@ const cx = className.bind(styles)
 
 import type { Props } from './props'
 
-export const Tooltip: (props:Props)=>React.Element<*> = ({ show, text }: Props) => {
+export const Tooltip = ({ show, text }: Props) => {
   return (
     <div className={cx(styles.container, {show})}>
       <Motion

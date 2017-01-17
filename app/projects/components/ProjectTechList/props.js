@@ -5,19 +5,17 @@
 * @flow
 */
 
-import { List } from 'immutable'
-
 export type Props = {
   title: string,
-  items: List<string>,
+  items: Array<string>,
 }
 
 export const sampleProps: Props = {
   title: 'Server / API',
-  items: List([
+  items: [
     'Node.js',
     'Express',
     'RethinkDB',
     'WebSockets',
-  ]),
+  ],
 }

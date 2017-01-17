@@ -12,7 +12,7 @@ import styles from './ProjectTech.scss'
 
 import type { Props } from './props'
 
-export const ProjectTech: (props:Props)=>React.Element<*> = ({ server, client }: Props) => {
+export const ProjectTech = ({ server, client }: Props) => {
   return (
     <div className={styles.container}>
       <ProjectTechList title='Server/API' items={server} />

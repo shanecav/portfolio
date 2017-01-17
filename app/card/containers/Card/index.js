@@ -12,10 +12,12 @@ import styles from './Card.scss'
 // import CardPhoto from '../../components/CardPhoto'
 import FlexGroupHorizontal from '../../../ui/components/FlexGroupHorizontal'
 import NetworkButton from '../../components/NetworkButton'
+import Loading from '../../../ui/components/Loading'
 
 import type { Props } from './props'
 
-export const Card: (props:Props)=>React.Element<*> = ({ profile }: Props) => {
+export const Card = ({ profile }: Props) => {
+  if (!profile) return <Loading text='Loading profile...' />
   return (
     <div className={styles.container}>
       {profile &&

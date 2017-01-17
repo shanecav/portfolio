@@ -5,21 +5,12 @@
 * @flow
 */
 
-import type { List } from 'immutable'
-
 import { sampleProps as sampleDetailsProps } from '../ProjectDetails/props'
-import ProjectRecord from '../../records/Project'
+
+import type { ProjectDetails } from '../ProjectDetails/props' // eslint-disable-line no-duplicate-imports
 
 export type Props = {
-  project: ProjectRecord<{
-    image: string,
-    title: string,
-    subheading: string,
-    description: string,
-    role: string,
-    server: List<string>,
-    client: List<string>,
-  }>,
+  project: ProjectDetails,
   media?: string,
 }
 

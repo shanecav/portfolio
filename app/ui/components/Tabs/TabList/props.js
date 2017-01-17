@@ -11,7 +11,7 @@ import ProjectInfoIcon from '../../../../projects/components/ProjectInfoIcon'
 
 export type Props = {
   active?: number,
-  updateActiveItem: (i: number) => (e: any) => void,
+  updateActiveItem?: (i: number) => (e: any) => void,
   children?: React.Element<*>,
 }
 

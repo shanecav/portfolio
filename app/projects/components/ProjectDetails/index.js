@@ -20,7 +20,7 @@ import styles from './ProjectDetails.scss'
 
 import type { Props } from './props'
 
-export const ProjectDetails: (props:Props)=>React.Element<*> = ({ project }: Props) => {
+export const ProjectDetails = ({ project }: Props) => {
   return (
     <div className={styles.container}>
       <ProjectHeading title={project.title} subheading={project.subheading} />

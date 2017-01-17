@@ -17,7 +17,7 @@ const cx = className.bind(styles)
 
 import type { Props } from './props'
 
-export const ProjectTitleMobile: (props:Props)=>React.Element<*> = ({ title, open }: Props) => {
+export const ProjectTitleMobile = ({ title, open }: Props) => {
   return (
     <h3 className={cx(styles.container, {open: open})}>
       {title}

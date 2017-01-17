@@ -5,24 +5,22 @@
 * @flow
 */
 
-import { List } from 'immutable'
-
 export type Props = {
-  server: List<string>,
-  client: List<string>,
+  server: Array<string>,
+  client: Array<string>,
 }
 
 export const sampleProps: Props = {
-  server: List([
+  server: [
     'Node.js',
     'Express',
     'RethinkDB',
     'WebSockets',
-  ]),
-  client: List([
+  ],
+  client: [
     'React Native',
     'Redux',
     'redux-saga',
     'Exponent'
-  ]),
+  ],
 }

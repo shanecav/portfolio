@@ -11,7 +11,7 @@ import styles from './FlexGroupHorizontal.scss'
 
 import type { Props } from './props'
 
-export const FlexGroupHorizontal: (props:Props)=>React.Element<*> = ({ children }: Props) => {
+export const FlexGroupHorizontal = ({ children }: Props) => {
   return (
     <ul className={styles.list}>
       {React.Children.map(children, (child, i) => (

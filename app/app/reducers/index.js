@@ -1,6 +1,6 @@
 // @flow
 
-import { combineReducers } from 'redux-immutable'
+import { combineReducers } from 'redux'
 
 import responsiveStateReducer from './responsive'
 

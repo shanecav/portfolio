@@ -11,7 +11,7 @@ import styles from './Footer.scss'
 
 import type { Props } from './props'
 
-export const Footer: (props:Props)=>React.Element<*> = (props: Props) => {
+export const Footer = (props: Props) => {
   return (
     <div className={styles.container}>
       <h5 className={styles.copyright}>©{new Date().getFullYear()} Shane Cavaliere</h5>

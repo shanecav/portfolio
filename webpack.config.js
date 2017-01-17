@@ -6,7 +6,7 @@ const merge = require('webpack-merge')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const SpritesmithPlugin = require('webpack-spritesmith')
-const CopyWebpackPlugin = require('copy-webpack-plugin')
+const Visualizer = require('webpack-visualizer-plugin')
 const autoprefixer = require('autoprefixer')
 
 const TARGET = process.env.npm_lifecycle_event
@@ -53,12 +53,6 @@ let common = {
       },
       retina: '@3x',
     }),
-    new CopyWebpackPlugin([
-      {
-        from: path.resolve(__dirname, 'content'),
-        to: path.resolve(__dirname, 'dist/content'),
-      },
-    ]),
   ],
   sassLoader: {
     includePaths: [
@@ -148,17 +142,16 @@ if (TARGET === 'build') {
     plugins: [
       new webpack.DefinePlugin({
         'process.env': {
-          'NODE_ENV': JSON.stringify('production'),
-        },
+          NODE_ENV: JSON.stringify('production')
+        }
       }),
-      new webpack.optimize.UglifyJsPlugin({
-        compress: {
-          warnings: true,
-        },
-      }),
+      new webpack.optimize.UglifyJsPlugin(),
+      new ExtractTextPlugin('styles.css'),
       new webpack.optimize.DedupePlugin(),
       new webpack.optimize.AggressiveMergingPlugin(),
-      new ExtractTextPlugin('styles.css'),
+      new Visualizer({
+        filename: './statistics.html'
+      }),
     ],
   })
 }

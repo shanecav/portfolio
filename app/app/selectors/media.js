@@ -1,7 +1,5 @@
 // @flow
 
-import type { Map } from 'immutable'
-
-const mediaSelector = (state: Map<string, *>) => state.get('browser').mediaType
+const mediaSelector = (state: Object) => state.browser.mediaType
 
 export default mediaSelector

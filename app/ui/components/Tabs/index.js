@@ -1,5 +1,5 @@
 // @flow
 
-export Tabs from './Tabs'
-export TabList from './TabList'
-export TabContentList from './TabContentList'
+export { default as Tabs } from './Tabs'
+export { default as TabList } from './TabList'
+export { default as TabContentList } from './TabContentList'

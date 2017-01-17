@@ -11,7 +11,7 @@ import styles from './ProjectInfoWrapper.scss'
 
 import type { Props } from './props'
 
-export const ProjectInfoWrapper: (props:Props)=>React.Element<*> = ({ children }: Props) => {
+export const ProjectInfoWrapper = ({ children }: Props) => {
   return (
     <div className={styles.container}>
       {children}

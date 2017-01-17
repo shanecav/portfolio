@@ -9,14 +9,16 @@ import React from 'react'
 import { firebaseConnect } from 'firebase-react'
 
 import styles from './About.scss'
+import Loading from '../../../ui/components/Loading'
 
 import type { Props } from './props'
 
-export const About: (props:Props)=>React.Element<*> = ({ about }: Props) => {
+export const About = ({ about }: Props) => {
+  if (!about) return <Loading text='Loading bio...' />
   return (
     <div className={styles.container}>
       <h4>About Me</h4>
-      {about && about.map((p, i) => (
+      {about.map((p, i) => (
         <p key={i}>{p}</p>
       ))}
     </div>
