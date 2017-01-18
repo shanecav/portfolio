@@ -4,6 +4,9 @@
 .container {
   max-width: map-get($breakpoints, 'desktop');
   margin: 0 auto;
+  @include media('>desktop') {
+    padding-left: 30px;
+  }
 }
 
 .loading {
