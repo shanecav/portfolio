@@ -7,7 +7,10 @@
 
 import React from 'react'
 import { connect } from 'react-redux'
-import { Motion, spring } from 'react-motion'
+import {
+  Motion,
+  spring,
+} from 'react-motion'
 
 import mediaSelector from '../../../app/selectors/media'
 import TouchPane from '../../../ui/components/TouchPane'
@@ -36,14 +39,12 @@ export class Project extends React.Component {
   }
 
   render () {
-    const isMobile = this.props.media === 'mobile' || this.props.media === 'mobileWide'
-
     return (
       <div className={styles.container}>
         <div className={styles.imgContainer}>
           <Motion
             style={{
-              s: spring(this.state.open && isMobile ? 1.1 : 1)
+              s: spring(this.state.open && this.props.media === 'phone' ? 1.1 : 1)
             }}
           >{({s}) => (
             <img
@@ -54,28 +55,28 @@ export class Project extends React.Component {
                 transform: `scale(${s})`,
               }} />
           )}</Motion>
-          {isMobile &&
+          {this.props.media === 'phone' &&
             <TouchPane onTouchEnd={this._toggleOpen}>
               <ProjectTitleMobile
                 title={this.props.project.title}
-                open={this.state.open} />
+                open={this.state.open && this.props.media === 'phone'} />
             </TouchPane>
           }
         </div>
         {this.props.project &&
           <Motion
             style={{
-              h: isMobile
+              h: this.props.media === 'phone'
                  ? spring(
                      this.state.open && this.detailsInnerNode
                      ? this.detailsInnerNode.offsetHeight
                      : 0
                    )
                  : -1,
-              o: isMobile
+              o: this.props.media === 'phone'
                  ? spring(this.state.open ? 1 : 0)
                  : 1,
-              y: isMobile
+              y: this.props.media === 'phone'
                  ? spring(this.state.open ? 0 : 50)
                  : 0,
             }}

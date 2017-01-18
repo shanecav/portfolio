@@ -10,7 +10,7 @@
   margin-top: 15px;
   word-wrap: break-word;
   white-space: nowrap;
-  @include media('<=mobile') {
+  @include media('<=phone') {
     display: none;
   }
 }

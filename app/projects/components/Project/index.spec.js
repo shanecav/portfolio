@@ -15,14 +15,14 @@ import { sampleProps, samplePropsPhone } from './props'
 describe('<Project />', () => {
   // Snapshots
 
-  it('media!==mobile renders correctly', () => {
+  it('media!==phone renders correctly', () => {
     const wrapper = shallow(
       <Project {...sampleProps} />
     )
     expect(shallowToJson(wrapper)).toMatchSnapshot()
   })
 
-  it('media===mobile state.open===false renders correctly', () => {
+  it('media===phone state.open===false renders correctly', () => {
     const wrapper = shallow(
       <Project {...samplePropsPhone} />
     )
@@ -30,7 +30,7 @@ describe('<Project />', () => {
     expect(shallowToJson(wrapper)).toMatchSnapshot()
   })
 
-  it('media===mobile state.open===true renders correctly', () => {
+  it('media===phone state.open===true renders correctly', () => {
     const wrapper = shallow(
       <Project {...samplePropsPhone} />
     )
