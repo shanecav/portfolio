@@ -57,9 +57,6 @@
   display: flex;
   align-items: center;
   margin-right: 30px;
-  @include media('<desktop') {
-    margin-right: 80px;
-  }
   @include media('<=phone') {
     margin-top: 4px;
     margin-right: 0;
