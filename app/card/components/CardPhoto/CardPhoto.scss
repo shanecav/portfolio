@@ -6,7 +6,7 @@
   overflow: hidden;
   width: 80px;
   height: 80px;
-  @include media('>phone') {
+  @include media('>mobile') {
     width: 115px;
     height: 115px;
   }

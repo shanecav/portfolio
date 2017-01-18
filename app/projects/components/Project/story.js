@@ -19,7 +19,7 @@ storiesOf('Project', module)
       </div>
     )
   })
-  .add('phone', () => {
+  .add('mobile', () => {
     return (
       <div style={{background: 'white'}}>
         <Project {...samplePropsPhone} />

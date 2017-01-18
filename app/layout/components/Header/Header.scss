@@ -6,7 +6,7 @@
   justify-content: flex-start;
   align-items: center;
   padding: 60px 0;
-  @include media('>phone') {
+  @include media('>mobile') {
     padding: 70px 0;
   }
 }

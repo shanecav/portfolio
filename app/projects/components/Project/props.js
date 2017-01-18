@@ -21,5 +21,5 @@ export const sampleProps: Props = {
 
 export const samplePropsPhone: Props = {
   project: sampleDetailsProps.project,
-  media: 'phone',
+  media: 'mobile',
 }

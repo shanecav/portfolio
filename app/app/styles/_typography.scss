@@ -21,7 +21,7 @@
     line-height: 36px;
     font-weight: 700;
     text-transform: uppercase;
-    @include media('<=phone') {
+    @include media('<=mobile') {
       font-size: 24px;
       line-height: 24px;
     }
@@ -31,7 +31,7 @@
     font-size: 30px;
     line-height: 30px;
     font-weight: 300;
-    @include media('<=phone') {
+    @include media('<=mobile') {
       font-size: 22px;
       line-height: 22px;
     }
@@ -42,7 +42,7 @@
     line-height: 28px;
     font-weight: 700;
     color: $darkPurple;
-    @include media('<=phone') {
+    @include media('<=mobile') {
       font-size: 18px;
       line-height: 18px;
     }
@@ -62,7 +62,7 @@
     font-weight: 700;
     text-transform: uppercase;
     margin-bottom: 6px;
-    @include media('<=phone') {
+    @include media('<=mobile') {
       margin-bottom: 4px;
     }
   }
@@ -75,7 +75,7 @@
 
   p {
     margin-top: 0;
-    @include media('<=phone') {
+    @include media('<=mobile') {
       font-size: 16px;
       line-height: 22px;
     }

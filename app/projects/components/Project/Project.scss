@@ -8,7 +8,7 @@
   &:last-child {
     padding-bottom: 0;
   }
-  @include media('>phone') {
+  @include media('>mobileWide') {
     display: flex;
     border-bottom: none;
     border-top: 1px solid #E1E1E1;
@@ -26,7 +26,7 @@
     width: 100%;
     height: auto;
   }
-  @include media('>phone') {
+  @include media('>mobileWide') {
     width: 60%;
   }
 }
@@ -38,14 +38,14 @@
 .detailsContainer {
   position: relative;
   overflow: hidden;
-  @include media('>phone') {
+  @include media('>mobileWide') {
     width: 40%;
   }
 }
 
 .detailsInner {
   padding: 10px 20px 20px 20px;
-  @include media('>phone') {
+  @include media('>mobileWide') {
     padding: 25px 0 10px 30px;
   }
 }

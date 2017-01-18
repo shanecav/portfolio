@@ -3,7 +3,7 @@
 import { createResponsiveStateReducer } from 'redux-responsive'
 
 export default createResponsiveStateReducer({
-  phone: 480,
-  tablet: 768,
+  mobile: 480,
+  mobileWide: 825,
   desktop: 1100,
 })

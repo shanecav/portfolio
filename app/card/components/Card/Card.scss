@@ -7,7 +7,7 @@
   justify-content: space-between;
   width: 100%;
   padding: 20px 0;
-  @include media('<=phone') {
+  @include media('<=mobile') {
     display: block;
     padding: 0;
   }
@@ -20,7 +20,7 @@
   @include media('<desktop') {
     margin-left: 30px;
   }
-  @include media('<=phone') {
+  @include media('<=mobile') {
     margin-left: 0;
     text-align: center;
   }
@@ -38,7 +38,7 @@
 .name {
   margin-top: 20px;
   margin-bottom: 2px;
-  @include media('<=phone') {
+  @include media('<=mobile') {
     margin-top: 0;
     margin-bottom: 4px;
   }
@@ -48,7 +48,7 @@
   font-weight: 300;
   margin-top: 0;
   margin-bottom: 15px;
-  @include media('<=phone') {
+  @include media('<=mobile') {
     margin-bottom: 10px;
   }
 }
@@ -57,10 +57,7 @@
   display: flex;
   align-items: center;
   margin-right: 30px;
-  @include media('<desktop') {
-    margin-right: 80px;
-  }
-  @include media('<=phone') {
+  @include media('<=mobile') {
     margin-top: 4px;
     margin-right: 0;
     justify-content: center;

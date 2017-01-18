@@ -3,7 +3,7 @@
 
 .container {
   margin: 50px 20px;
-  @include media('>phone') {
+  @include media('>mobile') {
     margin: 130px 120px;
   }
 }
