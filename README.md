@@ -5,5 +5,4 @@ This is the repo for my portfolio site at [shanecavaliere.com](http://shanecaval
 ***
 
 #### _This seems kind of complex for a simple portfolio site..._
-
 It is! But what can I say, I love building stuff with React.
